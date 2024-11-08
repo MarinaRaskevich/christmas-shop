@@ -1,4 +1,4 @@
-.slider-arrow, .button {
+.button, .slider-arrow {
   transition: all 0.3s ease-out;
 }
 
@@ -129,6 +129,11 @@ h4,
   border-radius: 10rem;
   border: 1px solid #ff4646;
   background: #ffffff;
+}
+
+.page__wrapper {
+  max-width: 1440px;
+  margin: auto;
 }
 
 /*# sourceMappingURL=style.css.map */

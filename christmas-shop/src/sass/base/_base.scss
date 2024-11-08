@@ -1,9 +1,11 @@
+@use "../abstracts" as *;
+
 html {
   font-size: 10px;
 }
 
 .page {
-  @extend %font-prim;
+  @extend %font-primary;
   @include font(
     $size: 1.6rem,
     $height: 2.368rem,

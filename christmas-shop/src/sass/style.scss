@@ -1,7 +1,8 @@
 //Abstracts
-@import "abstract/constants";
-@import "abstract/placeholders";
-@import "abstract/mixin";
+@use "abstracts";
+
 //Base
-@import "base/base";
-@import "base/buttons";
+@use "base" as base;
+
+//Layouts
+@use "layouts" as layouts;
