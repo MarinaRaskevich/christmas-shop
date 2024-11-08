@@ -1,0 +1,14 @@
+@use "../abstracts" as *;
+.header {
+  background: $color-light;
+  padding: 0 0.8rem;
+}
+
+.header__wrapper {
+  display: flex;
+  padding: 1.2rem 0;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
+  align-self: stretch;
+}

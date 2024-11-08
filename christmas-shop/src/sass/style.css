@@ -1,17 +1,368 @@
-/* Error: Can't find stylesheet to import.
- *   ,
- * 9 | @use "components" as comp;
- *   | ^^^^^^^^^^^^^^^^^^^^^^^^^
- *   '
- *   src\sass\style.scss 9:1  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Can't find stylesheet to import.\a   \2577 \a 9 \2502  @use \"components\" as comp;\d\a   \2502  ^^^^^^^^^^^^^^^^^^^^^^^^^\a   \2575 \a   src\\sass\\style.scss 9:1  root stylesheet";
+/*! modern-normalize v3.0.1 | MIT License | https://github.com/sindresorhus/modern-normalize */
+/*
+Document
+========
+*/
+/**
+Use a better box model (opinionated).
+*/
+*,
+::before,
+::after {
+  box-sizing: border-box;
 }
+
+html {
+  /* Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3) */
+  font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  line-height: 1.15; /* 1. Correct the line height in all browsers. */
+  -webkit-text-size-adjust: 100%; /* 2. Prevent adjustments of font size after orientation changes in iOS. */
+  tab-size: 4; /* 3. Use a more readable tab size (opinionated). */
+}
+
+/*
+Sections
+========
+*/
+body {
+  margin: 0; /* Remove the margin in all browsers. */
+}
+
+/*
+Text-level semantics
+====================
+*/
+/**
+Add the correct font weight in Chrome and Safari.
+*/
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+1. Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3)
+2. Correct the odd 'em' font sizing in all browsers.
+*/
+code,
+kbd,
+samp,
+pre {
+  font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/**
+Add the correct font size in all browsers.
+*/
+small {
+  font-size: 80%;
+}
+
+/**
+Prevent 'sub' and 'sup' elements from affecting the line height in all browsers.
+*/
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/*
+Tabular data
+============
+*/
+/**
+Correct table border color inheritance in Chrome and Safari. (https://issues.chromium.org/issues/40615503, https://bugs.webkit.org/show_bug.cgi?id=195016)
+*/
+table {
+  border-color: currentcolor;
+}
+
+/*
+Forms
+=====
+*/
+/**
+1. Change the font styles in all browsers.
+2. Remove the margin in Firefox and Safari.
+*/
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
+}
+
+/**
+Correct the inability to style clickable types in iOS and Safari.
+*/
+button,
+[type=button],
+[type=reset],
+[type=submit] {
+  -webkit-appearance: button;
+}
+
+/**
+Remove the padding so developers are not caught out when they zero out 'fieldset' elements in all browsers.
+*/
+legend {
+  padding: 0;
+}
+
+/**
+Add the correct vertical alignment in Chrome and Firefox.
+*/
+progress {
+  vertical-align: baseline;
+}
+
+/**
+Correct the cursor style of increment and decrement buttons in Safari.
+*/
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+1. Correct the odd appearance in Chrome and Safari.
+2. Correct the outline style in Safari.
+*/
+[type=search] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+
+/**
+Remove the inner padding in Chrome and Safari on macOS.
+*/
+::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Change font properties to 'inherit' in Safari.
+*/
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/*
+Interactive
+===========
+*/
+/*
+Add the correct display in Chrome and Safari.
+*/
+summary {
+  display: list-item;
+}
+
+.navigation__link, .button, .slider-arrow {
+  transition: all 0.3s ease-out;
+}
+
+.page {
+  font-family: "Montserrat", Verdana, sans-serif;
+}
+
+.caption {
+  font-family: "Allura", Verdana, sans-serif;
+}
+
+html {
+  font-size: 10px;
+}
+
+.page {
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 2.368rem;
+  text-transform: none;
+  letter-spacing: 0%;
+}
+
+main {
+  background-color: #ff4646;
+}
+
+h1 {
+  font-size: 3.2rem;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 4.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.576rem;
+}
+
+h2,
+.contact__text {
+  font-size: 2.4rem;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 3.648rem;
+  text-transform: uppercase;
+  letter-spacing: 0.384rem;
+}
+
+h3 {
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 2.432rem;
+  text-transform: uppercase;
+  letter-spacing: 0.128rem;
+}
+
+h4,
+.button,
+.navigation__link,
+.tab,
+.logo {
+  font-size: 1.2rem;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 1.56rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06rem;
+}
+
+.caption {
+  font-size: 2.4rem;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 2.4rem;
+  text-transform: none;
+  letter-spacing: 0.12rem;
+}
+
+.slider__item__text {
+  font-size: 8rem;
+  font-style: normal;
+  font-weight: bold;
+  line-height: normal;
+  text-transform: uppercase;
+  letter-spacing: 0%;
+}
+
+.logo {
+  display: flex;
+  padding: 0.8rem 2rem;
+  align-items: center;
+  gap: 0.8rem;
+  color: #181c29;
+  text-decoration: none;
+}
+
+.button {
+  padding: 2rem 3.2rem;
+  border-radius: 2rem;
+  border: none;
+  cursor: pointer;
+}
+.button_colored {
+  background: #181c29;
+  color: #ffffff;
+}
+.button_colored:hover {
+  background: #ffffff;
+  color: #181c29;
+}
+
+.slider-arrow {
+  color: #ff4646;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ffffff;
+  border-radius: 2rem;
+  border: 1px solid #ffffff;
+  width: 5.6rem;
+  height: 5.6rem;
+}
+.slider-arrow:hover {
+  color: #ffffff;
+  background-color: transparent;
+}
+.slider-arrow_inactive {
+  pointer-events: none;
+  color: rgba(255, 255, 255, 0.4);
+  background-color: transparent;
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.back-to-top {
+  display: flex;
+  width: 5.6rem;
+  height: 5.6rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10rem;
+  border: 1px solid #ff4646;
+  background: #ffffff;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+}
+
+.navigation__link {
+  list-style: none;
+  padding: 1.2rem 2rem;
+  color: #181c29;
+  cursor: pointer;
+  border-radius: 12px;
+}
+.navigation__link:hover {
+  color: #ff4646;
+  background-color: rgba(255, 70, 70, 0.1019607843);
+}
+
+.header {
+  background: #ffffff;
+  padding: 0 0.8rem;
+}
+
+.header__wrapper {
+  display: flex;
+  padding: 1.2rem 0;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
+  align-self: stretch;
+}
+
+.page__wrapper {
+  max-width: 1440px;
+  margin: auto;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 8.2rem;
+}
+
+/*# sourceMappingURL=style.css.map */

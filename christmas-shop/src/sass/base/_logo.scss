@@ -1,0 +1,10 @@
+@use "../abstracts" as *;
+
+.logo {
+  display: flex;
+  padding: 0.8rem 2rem;
+  align-items: center;
+  gap: 0.8rem;
+  color: $color-dark;
+  text-decoration: none;
+}

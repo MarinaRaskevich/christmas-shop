@@ -7,7 +7,7 @@
 
 .navigation__link {
   list-style: none;
-  padding: 2rem;
+  padding: 1.2rem 2rem;
   color: $color-dark;
   cursor: pointer;
   border-radius: 12px;
@@ -18,8 +18,8 @@
   }
 }
 
-.header__navigation {
-  @include media-tablet {
-    display: none;
-  }
-}
+// .header__navigation {
+//   @include media-tablet {
+//     display: none;
+//   }
+// }
