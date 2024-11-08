@@ -1,0 +1,59 @@
+html {
+  font-size: 10px;
+}
+
+body {
+  @extend %font-prim;
+  @include font(
+    $size: 1.6rem,
+    $height: 2.368rem,
+    $weight: normal,
+    $transform: none
+  );
+}
+
+h1 {
+  @include font($size: 3.2rem, $height: 4.8rem, $spacing: 0.576rem);
+  //   @include media-mobile {
+  //     @include font($height: 4.2rem, $size: 3.2rem);
+  //   }
+}
+
+h2,
+.contact__text {
+  @include font($size: 2.4rem, $height: 3.648rem, $spacing: 0.384rem);
+  //   @include media-mobile {
+  //     @include font($height: 3.3rem, $size: 2.4rem);
+  //   }
+}
+
+h3 {
+  @include font($size: 1.6rem, $height: 2.432rem, $spacing: 0.128rem);
+  //   @include media-mobile {
+  //     @include font($height: 3.1rem, $size: 2.1rem);
+  //   }
+}
+
+h4,
+.button,
+.navigation__link,
+.tab {
+  @include font($size: 1.2rem, $height: 1.56rem, $spacing: 0.06rem);
+  //   @include media-tablet {
+  //     @include font($height: 3rem, $size: 2rem);
+  //   }
+}
+
+.caption {
+  @extend %font-caption;
+  @include font(
+    $size: 2.4rem,
+    $spacing: 0.12rem,
+    $weight: normal,
+    $transform: none
+  );
+}
+
+.slider__item__text {
+  @include font($size: 8rem, $height: normal);
+}
