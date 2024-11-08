@@ -1,8 +1,12 @@
 //Abstracts
+@use "../../node_modules/modern-normalize/modern-normalize.css";
 @use "abstracts";
 
 //Base
 @use "base" as base;
+
+//Components
+@use "components" as comp;
 
 //Layouts
 @use "layouts" as layouts;

@@ -1,0 +1,25 @@
+@use "../abstracts" as *;
+
+.navigation {
+  display: flex;
+  align-items: center;
+}
+
+.navigation__link {
+  list-style: none;
+  padding: 2rem;
+  color: $color-dark;
+  cursor: pointer;
+  border-radius: 12px;
+  @extend %transition;
+  &:hover {
+    color: $color-primary;
+    background-color: $color-item-hoovered;
+  }
+}
+
+.header__navigation {
+  @include media-tablet {
+    display: none;
+  }
+}
