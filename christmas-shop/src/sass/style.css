@@ -2,7 +2,7 @@
   transition: all 0.3s ease-out;
 }
 
-body {
+.page {
   font-family: "Montserrat", Verdana, sans-serif;
 }
 
@@ -14,7 +14,7 @@ html {
   font-size: 10px;
 }
 
-body {
+.page {
   font-size: 1.6rem;
   font-style: normal;
   font-weight: normal;
@@ -54,7 +54,8 @@ h3 {
 h4,
 .button,
 .navigation__link,
-.tab {
+.tab,
+.logo {
   font-size: 1.2rem;
   font-style: normal;
   font-weight: bold;

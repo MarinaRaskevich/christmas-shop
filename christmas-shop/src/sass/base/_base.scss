@@ -2,7 +2,7 @@ html {
   font-size: 10px;
 }
 
-body {
+.page {
   @extend %font-prim;
   @include font(
     $size: 1.6rem,
@@ -37,7 +37,8 @@ h3 {
 h4,
 .button,
 .navigation__link,
-.tab {
+.tab,
+.logo {
   @include font($size: 1.2rem, $height: 1.56rem, $spacing: 0.06rem);
   //   @include media-tablet {
   //     @include font($height: 3rem, $size: 2rem);
