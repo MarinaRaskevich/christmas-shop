@@ -26,27 +26,34 @@
 }
 
 .slider-arrow {
-  color: $color-primary;
+  color: $color-light;
   cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: $color-light;
+  background-color: transparent;
   border-radius: 2rem;
   border: 1px solid $color-light;
   width: 5.6rem;
   height: 5.6rem;
   @extend %transition;
   &:hover {
-    color: $color-light;
-    background-color: transparent;
-    // .ico_play {
-    //   background-image: url("../img/icons/play-hover.svg");
-    // }
+    .ico_arrow-right {
+      background-image: url("../img/icons/arrow-right-hover.svg");
+    }
+    .ico_arrow-left {
+      background-image: url("../img/icons/arrow-left-hover.svg");
+    }
+    background: $color-light;
   }
   &_inactive {
+    .ico_arrow-right {
+      background-image: url("../img/icons/arrow-right-dis.svg");
+    }
+    .ico_arrow-left {
+      background-image: url("../img/icons/arrow-left-dis.svg");
+    }
     pointer-events: none;
-    color: $color-light-opacity;
     background-color: transparent;
     border-color: $color-light-opacity;
   }

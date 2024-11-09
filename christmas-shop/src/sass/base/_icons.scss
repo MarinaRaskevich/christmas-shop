@@ -1,0 +1,13 @@
+@use "../abstracts" as *;
+
+.ico_arrow-left {
+  width: 2.4rem;
+  height: 2.4rem;
+  background-image: url("../img/icons/arrow-left.svg");
+}
+
+.ico_arrow-right {
+  width: 2.4rem;
+  height: 2.4rem;
+  background-image: url("../img/icons/arrow-right.svg");
+}
