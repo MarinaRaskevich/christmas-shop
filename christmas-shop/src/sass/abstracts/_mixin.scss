@@ -14,14 +14,17 @@
   letter-spacing: $spacing;
 }
 
-// @mixin columns($width) {
-//   display: flex;
-//   flex-wrap: wrap;
-//   justify-content: space-between;
-//   > * {
-//     flex-basis: $width;
-//   }
-// }
+@mixin columns($width, $gap) {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $gap;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: flex-start;
+  > * {
+    flex-basis: $width;
+  }
+}
 
 // @mixin media-laptop {
 //   @media (max-width: $content-width) {
