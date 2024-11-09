@@ -1,0 +1,31 @@
+@use "../abstracts" as *;
+
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../img/backgrounds/bg-ball.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  padding: 6rem 0;
+}
+
+.hero__content {
+  max-width: 42.6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
+  align-self: stretch;
+  padding: 6rem 0;
+}
+
+.hero__caption {
+  color: $color-light;
+}
+
+.hero__header {
+  color: $color-light;
+  text-align: center;
+}

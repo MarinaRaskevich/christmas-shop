@@ -1,10 +1,10 @@
 @mixin font(
   $size,
   $height: $size,
-  $weight: bold,
+  $weight: 600,
   $style: normal,
   $transform: uppercase,
-  $spacing: 0%
+  $spacing: 0
 ) {
   font-size: $size;
   font-style: $style;
