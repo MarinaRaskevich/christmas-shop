@@ -1,0 +1,103 @@
+@use "../abstracts" as *;
+
+.footer {
+  display: flex;
+  padding: 6rem 0;
+  flex-direction: column;
+  align-items: center;
+  align-self: stretch;
+}
+
+.footer__wrapper {
+  display: flex;
+  max-width: 127.6rem;
+  flex-direction: column;
+  align-items: center;
+  gap: 6rem;
+  align-self: stretch;
+}
+
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
+  align-self: stretch;
+}
+
+.contact {
+  cursor: pointer;
+  border-radius: 2rem;
+  background: $color-content-background;
+  flex-basis: 1 1 calc((100% - 24px) / 3);
+  max-width: calc((100% - 24px) / 3);
+  &:hover {
+    color: $color-primary;
+  }
+  display: flex;
+  padding: 2rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
+  flex: 1 0 0;
+}
+
+@media (max-width: 1200px) {
+  .contact {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}
+
+.footer__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+  align-self: stretch;
+  color: $color-dark;
+}
+
+.socials-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1.2rem;
+}
+
+.footer__caption {
+  text-decoration: none;
+  color: inherit;
+  &:hover {
+    color: $color-primary;
+  }
+}
+
+.icon {
+  cursor: pointer;
+  display: flex;
+  padding: 0.8rem;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+  height: 4rem;
+  &:hover {
+    .ico_telegram {
+      background-image: url("../img/icons/telegram-hover.svg");
+    }
+
+    .ico_facebook {
+      background-image: url("../img/icons/facebook-hover.svg");
+    }
+
+    .ico_instagram {
+      background-image: url("../img/icons/instagram-hover.svg");
+    }
+
+    .ico_x {
+      background-image: url("../img/icons/x-hover.svg");
+    }
+  }
+}

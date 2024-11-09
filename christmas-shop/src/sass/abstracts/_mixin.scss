@@ -18,9 +18,6 @@
   display: flex;
   flex-wrap: wrap;
   gap: $gap;
-  justify-content: center;
-  align-items: flex-start;
-  align-content: flex-start;
   > * {
     flex-basis: $width;
   }

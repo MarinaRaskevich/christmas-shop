@@ -203,7 +203,7 @@ html {
 
 main {
   background-color: #ff4646;
-  border-radius: 2rem 2rem 0 0;
+  border-radius: 2rem;
   background-image: url("../img/backgrounds/bg-snow.png");
   background-repeat: repeat-y;
   background-size: 100%;
@@ -272,7 +272,8 @@ h1,
 h2,
 h3,
 h4,
-p {
+p,
+ul {
   margin: 0;
 }
 
@@ -344,16 +345,33 @@ p {
   background: #ffffff;
 }
 
-.ico_arrow-left {
+.ico {
   width: 2.4rem;
   height: 2.4rem;
+}
+
+.ico_arrow-left {
   background-image: url("../img/icons/arrow-left.svg");
 }
 
 .ico_arrow-right {
-  width: 2.4rem;
-  height: 2.4rem;
   background-image: url("../img/icons/arrow-right.svg");
+}
+
+.ico_telegram {
+  background-image: url("../img/icons/telegram.svg");
+}
+
+.ico_facebook {
+  background-image: url("../img/icons/facebook.svg");
+}
+
+.ico_instagram {
+  background-image: url("../img/icons/instagram.svg");
+}
+
+.ico_x {
+  background-image: url("../img/icons/x.svg");
 }
 
 .navigation {
@@ -384,7 +402,7 @@ p {
 }
 
 .hero__content {
-  max-width: 42.6rem;
+  max-width: 43rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -417,6 +435,9 @@ p {
 }
 
 .about__image {
+  width: 63.8rem;
+  height: 52.8rem;
+  flex-shrink: 0;
   border-radius: 2rem;
 }
 
@@ -547,9 +568,13 @@ p {
 
 .best-gifts-container {
   align-self: stretch;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: flex-start;
 }
 
 .best-gift {
+  cursor: pointer;
   display: flex;
   width: 31rem;
   height: 34.2rem;
@@ -557,6 +582,9 @@ p {
   align-items: center;
   border-radius: 2rem;
   background: #ffffff;
+}
+.best-gift:hover .best-gift__name {
+  color: #ff4646;
 }
 
 .best-gift__image {
@@ -696,12 +724,105 @@ p {
   display: flex;
   flex-wrap: wrap;
   gap: 1.2rem;
-  justify-content: center;
-  align-items: flex-start;
-  align-content: flex-start;
 }
 .layout-4-column > * {
   flex-basis: 31rem;
+}
+
+.footer {
+  display: flex;
+  padding: 6rem 0;
+  flex-direction: column;
+  align-items: center;
+  align-self: stretch;
+}
+
+.footer__wrapper {
+  display: flex;
+  max-width: 127.6rem;
+  flex-direction: column;
+  align-items: center;
+  gap: 6rem;
+  align-self: stretch;
+}
+
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
+  align-self: stretch;
+}
+
+.contact {
+  cursor: pointer;
+  border-radius: 2rem;
+  background: #ecf3f8;
+  flex-basis: 1 1 calc((100% - 24px) / 3);
+  max-width: calc((100% - 24px) / 3);
+  display: flex;
+  padding: 2rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
+  flex: 1 0 0;
+}
+.contact:hover {
+  color: #ff4646;
+}
+
+@media (max-width: 1200px) {
+  .contact {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}
+.footer__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+  align-self: stretch;
+  color: #181c29;
+}
+
+.socials-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1.2rem;
+}
+
+.footer__caption {
+  text-decoration: none;
+  color: inherit;
+}
+.footer__caption:hover {
+  color: #ff4646;
+}
+
+.icon {
+  cursor: pointer;
+  display: flex;
+  padding: 0.8rem;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+  height: 4rem;
+}
+.icon:hover .ico_telegram {
+  background-image: url("../img/icons/telegram-hover.svg");
+}
+.icon:hover .ico_facebook {
+  background-image: url("../img/icons/facebook-hover.svg");
+}
+.icon:hover .ico_instagram {
+  background-image: url("../img/icons/instagram-hover.svg");
+}
+.icon:hover .ico_x {
+  background-image: url("../img/icons/x-hover.svg");
 }
 
 /*# sourceMappingURL=style.css.map */

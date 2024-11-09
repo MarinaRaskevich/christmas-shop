@@ -1,13 +1,30 @@
 @use "../abstracts" as *;
 
-.ico_arrow-left {
+.ico {
   width: 2.4rem;
   height: 2.4rem;
+}
+
+.ico_arrow-left {
   background-image: url("../img/icons/arrow-left.svg");
 }
 
 .ico_arrow-right {
-  width: 2.4rem;
-  height: 2.4rem;
   background-image: url("../img/icons/arrow-right.svg");
+}
+
+.ico_telegram {
+  background-image: url("../img/icons/telegram.svg");
+}
+
+.ico_facebook {
+  background-image: url("../img/icons/facebook.svg");
+}
+
+.ico_instagram {
+  background-image: url("../img/icons/instagram.svg");
+}
+
+.ico_x {
+  background-image: url("../img/icons/x.svg");
 }

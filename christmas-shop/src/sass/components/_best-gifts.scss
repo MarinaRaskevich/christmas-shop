@@ -25,9 +25,13 @@
 
 .best-gifts-container {
   align-self: stretch;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: flex-start;
 }
 
 .best-gift {
+  cursor: pointer;
   display: flex;
   width: 31rem;
   height: 34.2rem;
@@ -35,6 +39,11 @@
   align-items: center;
   border-radius: 2rem;
   background: $color-light;
+  &:hover {
+    .best-gift__name {
+      color: $color-primary;
+    }
+  }
 }
 
 .best-gift__image {
