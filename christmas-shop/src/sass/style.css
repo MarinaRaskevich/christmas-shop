@@ -178,11 +178,11 @@ summary {
   display: list-item;
 }
 
-.contact, .footer__caption, .icon, .best-gift__name, .best-gift, .navigation__link, .button, .slider-arrow {
+.contact, .footer__caption, .icon, .tab, .best-gift__name, .best-gift, .navigation__link, .button, .slider-arrow {
   transition: all 0.4s ease-out;
 }
 
-.contact, .icon, .best-gift, .navigation__link, .button, .slider-arrow {
+.contact, .icon, .tab, .best-gift, .navigation__link, .button, .slider-arrow {
   cursor: pointer;
 }
 
@@ -211,9 +211,6 @@ html {
 main {
   background-color: #ff4646;
   border-radius: 2rem;
-  background-image: url("../img/backgrounds/bg-snow.png");
-  background-repeat: repeat-y;
-  background-size: 100%;
 }
 
 h1 {
@@ -433,12 +430,21 @@ ul {
   color: #181c29;
   border-radius: 12px;
 }
-.navigation__link:hover {
-  color: #ff4646;
-  background-color: rgba(255, 70, 70, 0.1019607843);
-}
 .navigation__link a {
   color: #181c29;
+}
+.navigation__link:hover {
+  background-color: rgba(255, 70, 70, 0.1019607843);
+}
+.navigation__link:hover a {
+  color: #ff4646;
+}
+.navigation__link_active {
+  pointer-events: none;
+  background: rgba(255, 70, 70, 0.1019607843);
+}
+.navigation__link_active a {
+  color: #ff4646;
 }
 
 .header__navigation {
@@ -461,10 +467,10 @@ a {
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
-  background-image: url(../img/backgrounds/bg-ball.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  background-image: url(../img/backgrounds/bg-ball.png), url(../img/backgrounds/bg-snow.png);
+  background-repeat: no-repeat, no-repeat;
+  background-size: cover, cover;
+  background-position: center, center;
   padding: 6rem 0;
   align-self: stretch;
 }
@@ -492,6 +498,10 @@ a {
 
 .about {
   padding: 6rem 0;
+  background-image: url(../img/backgrounds/bg-snow.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .about__wrapper {
@@ -542,6 +552,10 @@ a {
 
 .slider {
   padding: 6rem 0;
+  background-image: url(../img/backgrounds/bg-snow.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .slider__wrapper {
@@ -630,6 +644,10 @@ a {
 
 .best-gifts {
   padding: 6rem 0;
+  background-image: url(../img/backgrounds/bg-snow.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .best-gifts__wrapper {
@@ -730,9 +748,10 @@ a {
 
 .cta {
   padding: 6rem 0;
-  background-image: url("../img/backgrounds/bg-forest.png");
-  background-size: cover;
-  background-repeat: no-repeat;
+  background-image: url("../img/backgrounds/bg-forest.png"), url(../img/backgrounds/bg-snow.png);
+  background-repeat: no-repeat, no-repeat;
+  background-size: cover, cover;
+  background-position: center, center;
 }
 
 .cta__wrapper {
@@ -801,6 +820,57 @@ a {
   width: 0.1rem;
   height: 2rem;
   background: rgba(255, 255, 255, 0.4);
+}
+
+.gifts {
+  padding: 6rem 0;
+  background-image: url(../img/backgrounds/bg-garland.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.gifts__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 2rem;
+  max-width: 127.6rem;
+  align-self: stretch;
+}
+
+.gifts__header {
+  text-align: center;
+  max-width: 42.6rem;
+  color: #ffffff;
+}
+
+.gifts__tabs {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 0.8rem;
+}
+
+.tab {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  padding: 1.2rem 2rem;
+  border-radius: 1.2rem;
+  color: #ffffff;
+}
+.tab:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+.tab_selected {
+  background: rgba(255, 255, 255, 0.2);
+  pointer-events: none;
 }
 
 .header {

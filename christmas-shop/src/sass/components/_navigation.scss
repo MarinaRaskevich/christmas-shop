@@ -12,12 +12,21 @@
   padding: 1.2rem 2rem;
   color: $color-dark;
   border-radius: 12px;
-  &:hover {
-    color: $color-primary;
-    background-color: $color-item-hoovered;
-  }
   a {
     color: $color-dark;
+  }
+  &:hover {
+    a {
+      color: $color-primary;
+    }
+    background-color: $color-item-hovered;
+  }
+  &_active {
+    pointer-events: none;
+    a {
+      color: $color-primary;
+    }
+    background: $color-item-hovered;
   }
 }
 

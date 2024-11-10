@@ -2,9 +2,11 @@
 
 .cta {
   padding: 6rem 0;
-  background-image: url("../img/backgrounds/bg-forest.png");
-  background-size: cover;
-  background-repeat: no-repeat;
+  background-image: url("../img/backgrounds/bg-forest.png"),
+    url(../img/backgrounds/bg-snow.png);
+  background-repeat: no-repeat, no-repeat;
+  background-size: cover, cover;
+  background-position: center, center;
 }
 
 .cta__wrapper {
