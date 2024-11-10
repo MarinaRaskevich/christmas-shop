@@ -1,25 +1,32 @@
 @use "../abstracts" as *;
 
 .navigation {
-  display: flex;
-  align-items: center;
+  @include flex($align: center, $gap: 0.8rem);
+  padding-left: 0;
 }
 
 .navigation__link {
+  @extend %transition;
+  @extend %cursor-pointer;
   list-style: none;
   padding: 1.2rem 2rem;
   color: $color-dark;
-  cursor: pointer;
   border-radius: 12px;
-  @extend %transition;
   &:hover {
     color: $color-primary;
     background-color: $color-item-hoovered;
   }
+  a {
+    color: $color-dark;
+  }
 }
 
-// .header__navigation {
-//   @include media-tablet {
-//     display: none;
-//   }
-// }
+.header__navigation {
+  @include flex($justify: flex-end, $align: center);
+  flex: 1 0 0;
+  align-self: stretch;
+}
+
+a {
+  text-decoration: none;
+}

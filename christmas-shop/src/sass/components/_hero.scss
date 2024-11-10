@@ -1,22 +1,23 @@
 @use "../abstracts" as *;
 
 .hero {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flex($justify: center, $align: center);
   background-image: url(../img/backgrounds/bg-ball.png);
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: cover;
+  background-position: center;
   padding: 6rem 0;
+  align-self: stretch;
 }
 
 .hero__content {
-  max-width: 43rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 1.2rem;
+  @include flex(
+    $direction: column,
+    $justify: center,
+    $align: center,
+    $gap: 1.2rem
+  );
+  max-width: 42.88rem;
   align-self: stretch;
   padding: 6rem 0;
 }

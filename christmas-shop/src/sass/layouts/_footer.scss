@@ -1,46 +1,40 @@
 @use "../abstracts" as *;
 
 .footer {
-  display: flex;
+  @include flex($direction: column, $align: center);
   padding: 6rem 0;
-  flex-direction: column;
-  align-items: center;
   align-self: stretch;
 }
 
 .footer__wrapper {
-  display: flex;
+  @include flex($direction: column, $align: center, $gap: 6rem);
   max-width: 127.6rem;
-  flex-direction: column;
-  align-items: center;
-  gap: 6rem;
   align-self: stretch;
 }
 
 .contact-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 1.2rem;
+  @include flex($align: center, $justify: center, $wrap: wrap, $gap: 1.2rem);
   align-self: stretch;
 }
 
 .contact {
-  cursor: pointer;
+  @include flex(
+    $direction: column,
+    $align: center,
+    $justify: center,
+    $gap: 1.2rem
+  );
+  @extend %transition;
+  @extend %cursor-pointer;
   border-radius: 2rem;
   background: $color-content-background;
   flex-basis: 1 1 calc((100% - 24px) / 3);
   max-width: calc((100% - 24px) / 3);
+  color: $color-dark;
   &:hover {
     color: $color-primary;
   }
-  display: flex;
   padding: 2rem;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 1.2rem;
   flex: 1 0 0;
 }
 
@@ -52,35 +46,35 @@
 }
 
 .footer__content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1.2rem;
+  @include flex($direction: column, $align: center, $gap: 1.2rem);
   align-self: stretch;
   color: $color-dark;
 }
 
 .socials-container {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 1.2rem;
+  @include flex($justify: center, $align: flex-start, $gap: 1.2rem);
 }
 
 .footer__caption {
   text-decoration: none;
   color: inherit;
+  @extend %transition;
   &:hover {
     color: $color-primary;
   }
 }
 
+.contact__image {
+  @include flex($justify: center, $align: center);
+  width: 8rem;
+  height: 8rem;
+}
+
 .icon {
-  cursor: pointer;
-  display: flex;
+  @include flex($justify: center, $align: center);
+  @extend %transition;
+  @extend %cursor-pointer;
   padding: 0.8rem;
-  justify-content: center;
-  align-items: center;
   width: 4rem;
   height: 4rem;
   &:hover {

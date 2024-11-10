@@ -5,37 +5,26 @@
 }
 
 .slider__wrapper {
-  display: flex;
+  @include flex($direction: column, $justify: center, $gap: 2rem);
   max-width: 127.6rem;
-  flex-direction: column;
-  justify-content: center;
-  gap: 2rem;
 }
 
 .slider__content {
-  display: flex;
+  @include flex($direction: column, $align: center, $gap: 1.2rem);
   max-width: 42.6rem;
-  flex-direction: column;
-  align-items: center;
   align-self: center;
-  gap: 1.2rem;
   color: $color-light;
 }
 
 .slider__row {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
+  @include flex($direction: column, $justify: center, $align: flex-start);
   align-self: stretch;
   margin-right: calc(-8.2rem);
   overflow: hidden;
 }
 
 .slider__track {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
+  @include flex($align: center, $gap: 2rem);
 }
 
 .slider__item__image {
@@ -70,9 +59,7 @@
 }
 
 .slider__arrows {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
+  @include flex($justify: flex-end, $align: center, $gap: 2rem);
   gap: 2rem;
   align-self: end;
 }

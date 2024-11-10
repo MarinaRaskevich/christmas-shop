@@ -5,20 +5,19 @@
 }
 
 .best-gifts__wrapper {
-  display: flex;
+  @include flex($direction: column, $align: center, $gap: 2rem);
   max-width: 127.6rem;
-  flex-direction: column;
-  align-items: center;
-  gap: 2rem;
   align-self: stretch;
 }
 
 .best-gifts__content {
-  display: flex;
+  @include flex(
+    $direction: column,
+    $justify: center,
+    $align: center,
+    $gap: 1.2rem
+  );
   max-width: 42.6rem;
-  flex-direction: column;
-  align-items: center;
-  gap: 1.2rem;
   align-self: center;
   color: $color-light;
 }
@@ -30,13 +29,16 @@
   align-content: flex-start;
 }
 
+.best-gift__name {
+  @extend %transition;
+}
+
 .best-gift {
-  cursor: pointer;
-  display: flex;
+  @include flex($direction: column, $align: center);
+  @extend %cursor-pointer;
+  @extend %transition;
   width: 31rem;
   height: 34.2rem;
-  flex-direction: column;
-  align-items: center;
   border-radius: 2rem;
   background: $color-light;
   &:hover {
@@ -47,10 +49,9 @@
 }
 
 .best-gift__image {
-  display: flex;
+  @include flex($align: center);
   width: 31rem;
   height: 23rem;
-  align-items: center;
   flex-shrink: 0;
   background: $color-content-background;
   border-radius: 2rem;
@@ -62,11 +63,8 @@
 }
 
 .best-gift__content {
-  display: flex;
+  @include flex($direction: column, $align: flex-start, $gap: 0.8rem);
   padding: 2rem;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 0.8rem;
   flex: 1 0 0;
   align-self: stretch;
 }

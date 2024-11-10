@@ -2,16 +2,11 @@
 
 .about {
   padding: 6rem 0;
-  //   display: flex;
-  //   justify-content: center;
-  //   align-items: center;
-  //   align-self: stretch;
 }
 
 .about__wrapper {
-  display: flex;
+  @include flex($align: center);
   max-width: 127.6rem;
-  align-items: center;
   flex: 1 0 0;
   border-radius: 2rem;
   background: $color-light;
@@ -25,22 +20,16 @@
 }
 
 .about__content {
-  display: flex;
+  @include flex($direction: column, $justify: center, $align: flex-start);
   padding: 0 6rem;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
   flex: 1 0 0;
   align-self: stretch;
 }
 
 .about__content__wrapper {
-  display: flex;
+  @include flex($direction: column, $justify: center, $align: flex-start);
   max-width: 42.6rem;
   padding: 6rem 0;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
   gap: 2rem;
   align-self: stretch;
 }
