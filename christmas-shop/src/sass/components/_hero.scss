@@ -2,8 +2,8 @@
 
 .hero {
   @include flex($justify: center, $align: center);
-  background-image: url(../img/backgrounds/bg-ball.png),
-    url(../img/backgrounds/bg-snow.png);
+  background-image: url("../img/backgrounds/bg-ball.png"),
+    url("../img/backgrounds/bg-snow.png");
   background-repeat: no-repeat, no-repeat;
   background-size: cover, cover;
   background-position: center, center;

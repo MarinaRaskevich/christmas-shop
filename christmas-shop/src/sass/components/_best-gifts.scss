@@ -2,14 +2,14 @@
 
 .best-gifts {
   padding: 6rem 0;
-  background-image: url(../img/backgrounds/bg-snow.png);
+  background-image: url("../img/backgrounds/bg-snow.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
 
 .best-gifts__wrapper {
-  @include flex($direction: column, $align: center, $gap: 2rem);
+  @include flex($direction: column, $align: center, $gap: 1.9rem);
   max-width: 127.6rem;
   align-self: stretch;
 }

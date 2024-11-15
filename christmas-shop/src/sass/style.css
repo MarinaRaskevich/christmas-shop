@@ -17,9 +17,7 @@ html {
   font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
   line-height: 1.15; /* 1. Correct the line height in all browsers. */
   -webkit-text-size-adjust: 100%; /* 2. Prevent adjustments of font size after orientation changes in iOS. */
-  -moz-tab-size: 4;
-    -o-tab-size: 4;
-       tab-size: 4; /* 3. Use a more readable tab size (opinionated). */
+  tab-size: 4; /* 3. Use a more readable tab size (opinionated). */
 }
 
 /*
@@ -194,6 +192,27 @@ summary {
   font-family: "Allura", Verdana, sans-serif;
 }
 
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat-Regular.woff2") format("woff2"), url("../fonts/Montserrat-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat-SemiBold.woff2") format("woff2"), url("../fonts/Montserrat-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Allura";
+  src: url("../fonts/Allura-Regular.woff2") format("woff2"), url("../fonts/Allura-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 html {
   font-size: 10px;
   scroll-behavior: smooth;
@@ -467,7 +486,7 @@ a {
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
-  background-image: url(../img/backgrounds/bg-ball.png), url(../img/backgrounds/bg-snow.png);
+  background-image: url("../img/backgrounds/bg-ball.png"), url("../img/backgrounds/bg-snow.png");
   background-repeat: no-repeat, no-repeat;
   background-size: cover, cover;
   background-position: center, center;
@@ -498,7 +517,7 @@ a {
 
 .about {
   padding: 6rem 0;
-  background-image: url(../img/backgrounds/bg-snow.png);
+  background-image: url("../img/backgrounds/bg-snow.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -552,7 +571,7 @@ a {
 
 .slider {
   padding: 6rem 0;
-  background-image: url(../img/backgrounds/bg-snow.png);
+  background-image: url("../img/backgrounds/bg-snow.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -597,7 +616,7 @@ a {
   justify-content: flex-start;
   align-items: center;
   flex-wrap: nowrap;
-  gap: 2rem;
+  gap: 2.12rem;
 }
 
 .slider__item__image {
@@ -644,7 +663,7 @@ a {
 
 .best-gifts {
   padding: 6rem 0;
-  background-image: url(../img/backgrounds/bg-snow.png);
+  background-image: url("../img/backgrounds/bg-snow.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -656,7 +675,7 @@ a {
   justify-content: flex-start;
   align-items: center;
   flex-wrap: nowrap;
-  gap: 2rem;
+  gap: 1.9rem;
   max-width: 127.6rem;
   align-self: stretch;
 }
@@ -748,7 +767,7 @@ a {
 
 .cta {
   padding: 6rem 0;
-  background-image: url("../img/backgrounds/bg-forest.png"), url(../img/backgrounds/bg-snow.png);
+  background-image: url("../img/backgrounds/bg-forest.png"), url("../img/backgrounds/bg-snow.png");
   background-repeat: no-repeat, no-repeat;
   background-size: cover, cover;
   background-position: center, center;
@@ -770,7 +789,7 @@ a {
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
-  gap: 2rem;
+  gap: 1.9rem;
   max-width: 42.6rem;
   padding: 6rem 0;
   align-self: stretch;
@@ -824,7 +843,7 @@ a {
 
 .gifts {
   padding: 6rem 0;
-  background-image: url(../img/backgrounds/bg-garland.png);
+  background-image: url("../img/backgrounds/bg-garland.png");
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -1022,4 +1041,6 @@ a {
 }
 .icon:hover .ico_x {
   background-image: url("../img/icons/x-hover.svg");
-}/*# sourceMappingURL=style.css.map */
+}
+
+/*# sourceMappingURL=style.css.map */

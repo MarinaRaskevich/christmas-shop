@@ -2,7 +2,7 @@
 
 .slider {
   padding: 6rem 0;
-  background-image: url(../img/backgrounds/bg-snow.png);
+  background-image: url("../img/backgrounds/bg-snow.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -28,7 +28,7 @@
 }
 
 .slider__track {
-  @include flex($align: center, $gap: 2rem);
+  @include flex($align: center, $gap: 2.12rem);
 }
 
 .slider__item__image {

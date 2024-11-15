@@ -3,7 +3,7 @@
 .cta {
   padding: 6rem 0;
   background-image: url("../img/backgrounds/bg-forest.png"),
-    url(../img/backgrounds/bg-snow.png);
+    url("../img/backgrounds/bg-snow.png");
   background-repeat: no-repeat, no-repeat;
   background-size: cover, cover;
   background-position: center, center;
@@ -20,7 +20,7 @@
     $direction: column,
     $align: center,
     $justify: center,
-    $gap: 2rem
+    $gap: 1.9rem
   );
   max-width: 42.6rem;
   padding: 6rem 0;
