@@ -1,0 +1,58 @@
+@use "../abstracts" as *;
+
+.button {
+  @extend %cursor-pointer;
+  @extend %transition;
+  padding: 2rem 3.2rem;
+  border-radius: 2rem;
+  border: none;
+  &_colored {
+    background: $color-dark;
+    color: $color-light;
+    &:hover {
+      background: $color-light;
+      color: $color-dark;
+    }
+  }
+}
+
+.slider-arrow {
+  @include flex($align: center, $justify: center);
+  @extend %cursor-pointer;
+  @extend %transition;
+  color: $color-light;
+  background-color: transparent;
+  border-radius: 2rem;
+  border: 1px solid $color-light;
+  width: 5.6rem;
+  height: 5.6rem;
+  &:hover {
+    .ico_arrow-right {
+      background-image: url("../img/icons/arrow-right-hover.svg");
+    }
+    .ico_arrow-left {
+      background-image: url("../img/icons/arrow-left-hover.svg");
+    }
+    background: $color-light;
+  }
+  &_inactive {
+    .ico_arrow-right {
+      background-image: url("../img/icons/arrow-right-dis.svg");
+    }
+    .ico_arrow-left {
+      background-image: url("../img/icons/arrow-left-dis.svg");
+    }
+    pointer-events: none;
+    background-color: transparent;
+    border-color: $color-light-opacity;
+  }
+}
+
+.back-to-top {
+  @include flex($align: center, $justify: center);
+  width: 5.6rem;
+  height: 5.6rem;
+  border-radius: 10rem;
+  border: 1px solid $color-primary;
+  background: $color-light;
+}

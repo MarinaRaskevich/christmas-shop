@@ -1,0 +1,42 @@
+@mixin font(
+  $size,
+  $height: $size,
+  $weight: 600,
+  $style: normal,
+  $transform: uppercase,
+  $spacing: 0
+) {
+  font-size: $size;
+  font-style: $style;
+  font-weight: $weight;
+  line-height: $height;
+  text-transform: $transform;
+  letter-spacing: $spacing;
+}
+
+@mixin columns($width, $gap) {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $gap;
+  > * {
+    flex-basis: $width;
+  }
+}
+
+@mixin flex(
+  $direction: row,
+  $justify: flex-start,
+  $align: stretch,
+  $wrap: nowrap,
+  $gap: null
+) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+  flex-wrap: $wrap;
+
+  @if $gap != null {
+    gap: $gap;
+  }
+}

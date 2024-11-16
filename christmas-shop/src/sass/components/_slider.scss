@@ -1,0 +1,69 @@
+@use "../abstracts" as *;
+
+.slider {
+  padding: 6rem 0;
+  background-image: url("../img/backgrounds/bg-snow.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.slider__wrapper {
+  @include flex($direction: column, $justify: center, $gap: 2rem);
+  max-width: 127.6rem;
+}
+
+.slider__content {
+  @include flex($direction: column, $align: center, $gap: 1.2rem);
+  max-width: 42.6rem;
+  align-self: center;
+  color: $color-light;
+}
+
+.slider__row {
+  @include flex($direction: column, $justify: center, $align: flex-start);
+  align-self: stretch;
+  margin-right: calc(-8.2rem);
+  overflow: hidden;
+}
+
+.slider__track {
+  @include flex($align: center, $gap: 2.12rem);
+}
+
+.slider__item__image {
+  width: 20rem;
+  height: 20rem;
+  border-radius: 2rem;
+  flex-shrink: 0;
+}
+
+.slider__item__text {
+  color: $color-light;
+}
+
+.image-showman {
+  background-image: url(../img/slider-images/snowman.png);
+  background-size: cover;
+}
+
+.image-christmas-trees {
+  background-image: url(../img/slider-images/christmas-trees.png);
+  background-size: cover;
+}
+
+.image-christmas-tree-ball {
+  background-image: url(../img/slider-images/christmas-tree-ball.png);
+  background-size: cover;
+}
+
+.image-fairytale-house {
+  background-image: url(../img/slider-images/fairytale-house.png);
+  background-size: cover;
+}
+
+.slider__arrows {
+  @include flex($justify: flex-end, $align: center, $gap: 2rem);
+  gap: 2rem;
+  align-self: end;
+}

@@ -1,0 +1,13 @@
+@use "../abstracts" as *;
+
+.logo {
+  @include flex($align: center, $gap: 0.8rem);
+  padding: 0.8rem 2rem;
+  color: $color-dark;
+  text-decoration: none;
+}
+
+.logo__image {
+  @include flex($align: center, $justify: center, $gap: 0.8rem);
+  cursor: pointer;
+}

@@ -1,0 +1,97 @@
+@use "../abstracts" as *;
+
+.footer {
+  @include flex($direction: column, $align: center);
+  padding: 6rem 0;
+  align-self: stretch;
+}
+
+.footer__wrapper {
+  @include flex($direction: column, $align: center, $gap: 6rem);
+  max-width: 127.6rem;
+  align-self: stretch;
+}
+
+.contact-container {
+  @include flex($align: center, $justify: center, $wrap: wrap, $gap: 1.2rem);
+  align-self: stretch;
+}
+
+.contact {
+  @include flex(
+    $direction: column,
+    $align: center,
+    $justify: center,
+    $gap: 1.2rem
+  );
+  @extend %transition;
+  @extend %cursor-pointer;
+  border-radius: 2rem;
+  background: $color-content-background;
+  flex-basis: 1 1 calc((100% - 24px) / 3);
+  max-width: calc((100% - 24px) / 3);
+  color: $color-dark;
+  &:hover {
+    color: $color-primary;
+  }
+  padding: 2rem;
+  flex: 1 0 0;
+}
+
+@media (max-width: 1200px) {
+  .contact {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}
+
+.footer__content {
+  @include flex($direction: column, $align: center, $gap: 1.2rem);
+  align-self: stretch;
+  color: $color-dark;
+}
+
+.socials-container {
+  @include flex($justify: center, $align: flex-start, $gap: 1.2rem);
+}
+
+.footer__caption {
+  text-decoration: none;
+  color: inherit;
+  @extend %transition;
+  &:hover {
+    color: $color-primary;
+  }
+}
+
+.contact__image {
+  @include flex($justify: center, $align: center);
+  width: 8rem;
+  height: 8rem;
+}
+
+.icon {
+  @include flex($justify: center, $align: center);
+  @extend %transition;
+  @extend %cursor-pointer;
+  padding: 0.8rem;
+  width: 4rem;
+  height: 4rem;
+  &:hover {
+    .ico_telegram {
+      background-image: url("../img/icons/telegram-hover.svg");
+    }
+
+    .ico_facebook {
+      background-image: url("../img/icons/facebook-hover.svg");
+    }
+
+    .ico_instagram {
+      background-image: url("../img/icons/instagram-hover.svg");
+    }
+
+    .ico_x {
+      background-image: url("../img/icons/x-hover.svg");
+    }
+  }
+}

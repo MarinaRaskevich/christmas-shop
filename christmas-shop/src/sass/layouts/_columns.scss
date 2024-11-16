@@ -1,0 +1,4 @@
+@use "../abstracts" as *;
+.layout-4-column {
+  @include columns($width: 31rem, $gap: 1.2rem);
+}

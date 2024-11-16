@@ -1,0 +1,41 @@
+@use "../abstracts" as *;
+
+.navigation {
+  @include flex($align: center, $gap: 0.8rem);
+  padding-left: 0;
+}
+
+.navigation__link {
+  @extend %transition;
+  @extend %cursor-pointer;
+  list-style: none;
+  padding: 1.2rem 2rem;
+  color: $color-dark;
+  border-radius: 12px;
+  a {
+    color: $color-dark;
+  }
+  &:hover {
+    a {
+      color: $color-primary;
+    }
+    background-color: $color-item-hovered;
+  }
+  &_active {
+    pointer-events: none;
+    a {
+      color: $color-primary;
+    }
+    background: $color-item-hovered;
+  }
+}
+
+.header__navigation {
+  @include flex($justify: flex-end, $align: center);
+  flex: 1 0 0;
+  align-self: stretch;
+}
+
+a {
+  text-decoration: none;
+}

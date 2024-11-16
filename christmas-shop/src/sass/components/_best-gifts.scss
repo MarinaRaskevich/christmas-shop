@@ -1,0 +1,96 @@
+@use "../abstracts" as *;
+
+.best-gifts {
+  padding: 6rem 0;
+  background-image: url("../img/backgrounds/bg-snow.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.best-gifts__wrapper {
+  @include flex($direction: column, $align: center, $gap: 1.9rem);
+  max-width: 127.6rem;
+  align-self: stretch;
+}
+
+.best-gifts__content {
+  @include flex(
+    $direction: column,
+    $justify: center,
+    $align: center,
+    $gap: 1.2rem
+  );
+  max-width: 42.6rem;
+  align-self: center;
+  color: $color-light;
+}
+
+.best-gifts-container {
+  align-self: stretch;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: flex-start;
+}
+
+.best-gift__name {
+  @extend %transition;
+}
+
+.best-gift {
+  @include flex($direction: column, $align: center);
+  @extend %cursor-pointer;
+  @extend %transition;
+  width: 31rem;
+  height: 34.2rem;
+  border-radius: 2rem;
+  background: $color-light;
+  &:hover {
+    .best-gift__name {
+      color: $color-primary;
+    }
+  }
+}
+
+.best-gift__image {
+  @include flex($align: center);
+  width: 31rem;
+  height: 23rem;
+  flex-shrink: 0;
+  background: $color-content-background;
+  border-radius: 2rem;
+
+  img {
+    border-radius: 2rem;
+    width: 100%;
+  }
+}
+
+.best-gift__content {
+  @include flex($direction: column, $align: flex-start, $gap: 0.8rem);
+  padding: 2rem;
+  flex: 1 0 0;
+  align-self: stretch;
+}
+
+.best-gift__category--work {
+  color: $color-work-tag;
+}
+
+.best-gift__category--health {
+  color: $color-health-tag;
+}
+
+.best-gift__category--harmony {
+  color: $color-harmony-tag;
+}
+
+.best-gift__name {
+  color: $color-dark;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  align-self: stretch;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

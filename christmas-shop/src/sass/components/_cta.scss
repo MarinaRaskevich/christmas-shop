@@ -1,0 +1,61 @@
+@use "../abstracts" as *;
+
+.cta {
+  padding: 6rem 0;
+  background-image: url("../img/backgrounds/bg-forest.png"),
+    url("../img/backgrounds/bg-snow.png");
+  background-repeat: no-repeat, no-repeat;
+  background-size: cover, cover;
+  background-position: center, center;
+}
+
+.cta__wrapper {
+  @include flex($align: center, $justify: center);
+  max-width: 127.6rem;
+  padding: 6rem 0;
+}
+
+.cta__content {
+  @include flex(
+    $direction: column,
+    $align: center,
+    $justify: center,
+    $gap: 1.9rem
+  );
+  max-width: 42.6rem;
+  padding: 6rem 0;
+  align-self: stretch;
+}
+
+.cta__header {
+  text-align: center;
+  color: $color-light;
+}
+
+.cta__caption {
+  color: $color-light;
+}
+
+.cta__timer {
+  @include flex($direction: column, $align: center, $gap: 0.8rem);
+  align-self: stretch;
+}
+
+.timer {
+  @include flex($align: center);
+  padding: 0.8rem 1.2rem 1.2rem 1.2rem;
+  border-radius: 2rem;
+  background: $color-light-opacity;
+}
+
+.timer__part {
+  @include flex($direction: column, $align: center, $justify: center);
+  width: 8rem;
+  color: $color-light;
+}
+
+.timer__separator {
+  width: 0.1rem;
+  height: 2rem;
+  background: $color-light-opacity;
+}

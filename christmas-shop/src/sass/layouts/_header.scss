@@ -1,0 +1,11 @@
+@use "../abstracts" as *;
+.header {
+  background: $color-light;
+}
+
+.header__wrapper {
+  @include flex($justify: center, $align: center, $gap: 1.2rem);
+  max-width: 127.6rem;
+  padding: 1.2rem 0;
+  align-self: stretch;
+}

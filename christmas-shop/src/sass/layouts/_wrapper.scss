@@ -1,0 +1,10 @@
+@use "../abstracts" as *;
+
+.page__wrapper {
+  max-width: $content-width;
+  margin: auto;
+}
+
+.wrapper {
+  margin: 0 8.2rem;
+}

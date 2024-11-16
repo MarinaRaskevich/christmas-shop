@@ -1,0 +1,40 @@
+@use "../abstracts" as *;
+
+.gifts {
+  padding: 6rem 0;
+  background-image: url("../img/backgrounds/bg-garland.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.gifts__wrapper {
+  @include flex($direction: column, $align: center, $gap: 2rem);
+  max-width: 127.6rem;
+  align-self: stretch;
+}
+
+.gifts__header {
+  text-align: center;
+  max-width: 42.6rem;
+  color: $color-light;
+}
+
+.gifts__tabs {
+  @include flex($align: center, $gap: 0.8rem);
+}
+
+.tab {
+  @include flex($align: center, $justify: center);
+  @extend %transition;
+  @extend %cursor-pointer;
+  padding: 1.2rem 2rem;
+  border-radius: 1.2rem;
+  color: $color-light;
+  &:hover {
+    background: $color-tab-hoovered;
+  }
+  &_selected {
+    background: $color-tab-hoovered;
+    pointer-events: none;
+  }
+}

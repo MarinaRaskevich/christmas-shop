@@ -1,0 +1,51 @@
+@use "../abstracts" as *;
+
+.ico {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
+.ico-footer {
+  width: 8rem;
+  height: 8rem;
+}
+
+.ico_arrow-left {
+  background-image: url("../img/icons/arrow-left.svg");
+}
+
+.ico_arrow-right {
+  background-image: url("../img/icons/arrow-right.svg");
+}
+
+.ico_telegram {
+  background-image: url("../img/icons/telegram.svg");
+}
+
+.ico_facebook {
+  background-image: url("../img/icons/facebook.svg");
+}
+
+.ico_instagram {
+  background-image: url("../img/icons/instagram.svg");
+}
+
+.ico_x {
+  background-image: url("../img/icons/x.svg");
+}
+
+.ico_logo {
+  background-image: url("../img/logo.svg");
+}
+
+.ico_santa {
+  background-image: url("../img/icons/santa.svg");
+}
+
+.ico_christmas-tree {
+  background-image: url("../img/icons/christmas-tree.svg");
+}
+
+.ico_snake {
+  background-image: url("../img/icons/snake.svg");
+}
