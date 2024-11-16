@@ -4,12 +4,23 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "style": "sass --watch src/sass/style.scss src/sass/style.css",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "style": "sass --watch src/sass/style.scss src/sass/style.css"
   },
-  "author": "",
+  "author": "MarinaRaskevich",
   "license": "ISC",
   "dependencies": {
     "modern-normalize": "^3.0.1"
+  },
+  "devDependencies": {
+    "clean-webpack-plugin": "^4.0.0",
+    "css-loader": "^7.1.2",
+    "html-loader": "^5.1.0",
+    "html-webpack-plugin": "^5.6.3",
+    "mini-css-extract-plugin": "^2.9.2",
+    "sass": "^1.81.0",
+    "sass-loader": "^16.0.3",
+    "style-loader": "^4.0.0",
+    "webpack": "^5.96.1",
+    "webpack-cli": "^5.1.4"
   }
 }
