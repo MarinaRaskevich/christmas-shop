@@ -25,6 +25,12 @@
   align-self: stretch;
   margin-right: calc(-8.2rem);
   overflow: hidden;
+  @include media-tablet {
+    margin-right: 0;
+  }
+  @include media-mobile {
+    margin-right: calc(-0.8rem);
+  }
 }
 
 .slider__track {

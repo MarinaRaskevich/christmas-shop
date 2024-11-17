@@ -14,14 +14,27 @@
   flex: 1 0 0;
   border-radius: 2rem;
   background: $color-light;
+  @include media-mobile {
+    @include flex($direction: column, $justify: center, $align: flex-start);
+  }
 }
 
 .about__image {
-  background-image: url("../img/about/santa.webp");
-  width: 63.8rem;
+  @include flex($direction: column, $justify: center, $align: center);
   height: 52.8rem;
-  flex-shrink: 1;
+  flex: 1 0 0;
   border-radius: 2rem;
+  overflow: hidden;
+  @include media-mobile {
+    align-self: stretch;
+    flex: 0 1 auto;
+  }
+  img {
+    border-radius: 2rem;
+    width: 63.8rem;
+    height: 52.8rem;
+    flex-shrink: 0;
+  }
 }
 
 .about__content {
@@ -29,6 +42,10 @@
   padding: 0 6rem;
   flex: 1 0 0;
   align-self: stretch;
+  @include media-mobile {
+    padding: 0 2rem;
+    flex: 0 1 auto;
+  }
 }
 
 .about__content__wrapper {
