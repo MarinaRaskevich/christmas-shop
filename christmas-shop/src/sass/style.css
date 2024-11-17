@@ -536,9 +536,10 @@ a {
 }
 
 .about__image {
+  background-image: url("../img/about/santa.webp");
   width: 63.8rem;
   height: 52.8rem;
-  flex-shrink: 0;
+  flex-shrink: 1;
   border-radius: 2rem;
 }
 
@@ -631,22 +632,22 @@ a {
 }
 
 .image-showman {
-  background-image: url(../img/slider-images/snowman.png);
+  background-image: url(../img/slider-images/snowman.webp);
   background-size: cover;
 }
 
 .image-christmas-trees {
-  background-image: url(../img/slider-images/christmas-trees.png);
+  background-image: url(../img/slider-images/christmas-trees.webp);
   background-size: cover;
 }
 
 .image-christmas-tree-ball {
-  background-image: url(../img/slider-images/christmas-tree-ball.png);
+  background-image: url(../img/slider-images/christmas-tree-ball.webp);
   background-size: cover;
 }
 
 .image-fairytale-house {
-  background-image: url(../img/slider-images/fairytale-house.png);
+  background-image: url(../img/slider-images/fairytale-house.webp);
   background-size: cover;
 }
 
