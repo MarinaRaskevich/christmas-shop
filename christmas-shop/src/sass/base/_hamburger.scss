@@ -17,6 +17,7 @@
 
 .hamburger__line {
   width: 2rem;
-  border: 1px solid $color-dark;
+  background-color: $color-dark;
+  height: 0.1rem;
   @extend %transition;
 }

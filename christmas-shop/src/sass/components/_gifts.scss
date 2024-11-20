@@ -21,6 +21,9 @@
 
 .gifts__tabs {
   @include flex($align: center, $gap: 0.8rem);
+  @include media-mobile {
+    @include flex($gap: 0rem);
+  }
 }
 
 .tab {
@@ -36,5 +39,8 @@
   &_selected {
     background: $color-tab-hoovered;
     pointer-events: none;
+  }
+  @include media-mobile {
+    padding: 1.2rem 0.8rem;
   }
 }

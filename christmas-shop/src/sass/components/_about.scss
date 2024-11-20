@@ -24,6 +24,7 @@
   height: 52.8rem;
   flex: 1 0 0;
   border-radius: 2rem;
+  width: 50%;
   overflow: hidden;
   @include media-mobile {
     align-self: stretch;
@@ -42,6 +43,7 @@
   padding: 0 6rem;
   flex: 1 0 0;
   align-self: stretch;
+  width: 50%;
   @include media-mobile {
     padding: 0 2rem;
     flex: 0 1 auto;

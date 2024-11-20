@@ -451,7 +451,8 @@ ul {
 
 .hamburger__line {
   width: 2rem;
-  border: 1px solid #181c29;
+  background-color: #181c29;
+  height: 0.1rem;
 }
 
 .navigation {
@@ -584,6 +585,7 @@ a {
   height: 52.8rem;
   flex: 1 0 0;
   border-radius: 2rem;
+  width: 50%;
   overflow: hidden;
 }
 @media (max-width: 380px) {
@@ -608,6 +610,7 @@ a {
   padding: 0 6rem;
   flex: 1 0 0;
   align-self: stretch;
+  width: 50%;
 }
 @media (max-width: 380px) {
   .about__content {
@@ -781,7 +784,7 @@ a {
   width: 31rem;
   height: 34.2rem;
   border-radius: 2rem;
-  background: #ffffff;
+  background: #ecf3f8;
 }
 .best-gift:hover .best-gift__name {
   color: #ff4646;
@@ -796,7 +799,6 @@ a {
   width: 31rem;
   height: 23rem;
   flex-shrink: 0;
-  background: #ecf3f8;
   border-radius: 2rem;
 }
 .best-gift__image img {
@@ -814,6 +816,8 @@ a {
   padding: 2rem;
   flex: 1 0 0;
   align-self: stretch;
+  background-color: #ffffff;
+  border-radius: 2rem;
 }
 
 .best-gift__category--work {
@@ -946,6 +950,16 @@ a {
   flex-wrap: nowrap;
   gap: 0.8rem;
 }
+@media (max-width: 380px) {
+  .gifts__tabs {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: stretch;
+    flex-wrap: nowrap;
+    gap: 0rem;
+  }
+}
 
 .tab {
   display: flex;
@@ -963,6 +977,11 @@ a {
 .tab_selected {
   background: rgba(255, 255, 255, 0.2);
   pointer-events: none;
+}
+@media (max-width: 380px) {
+  .tab {
+    padding: 1.2rem 0.8rem;
+  }
 }
 
 .header {
