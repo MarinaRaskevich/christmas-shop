@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" >
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
-    <link rel="icon" href="src/img/logo.svg" type="image/svg+xml" >
-    <link rel="stylesheet" href="src/sass/style.css" >
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="src/img/logo.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="src/sass/style.css" />
     <title>Christmas shop</title>
   </head>
-  <body class="page">
+  <body class="page" id="gifts">
     <div class="page__wrapper">
       <header class="header">
         <div class="wrapper header__wrapper">
@@ -52,180 +52,170 @@
               </h1>
             </div>
             <div class="gifts__tabs tabs">
-              <div class="tab tab--all tab_selected">All</div>
-              <div class="tab tab--work">FOR WORK</div>
-              <div class="tab tab--health">FOR HEALTH</div>
-              <div class="tab tab--harmony">FOR HARMONY</div>
+              <div data-tab="all" class="tab tab--all tab_selected">All</div>
+              <div data-tab="work" class="tab tab--work">FOR WORK</div>
+              <div data-tab="health" class="tab tab--health">FOR HEALTH</div>
+              <div data-tab="harmony" class="tab tab--harmony">FOR HARMONY</div>
             </div>
-            <div class="layout-4-column best-gifts-container">
-              <div class="best-gift">
-                <div class="best-gift__image">
+            <div class="layout-4-column gifts-container">
+              <div class="gift" data-tab="work">
+                <div class="gift__image">
                   <img
                     src="src/img/gifts/gift-for-work.png"
-                    alt="gift-for-work"
-                  >
+                    alt="gift for work"
+                  />
                 </div>
-                <div class="best-gift__content">
-                  <h4 class="best-gift__category best-gift__category--work">
-                    For work
-                  </h4>
-                  <h3 class="best-gift__name">Console.log Guru</h3>
+                <div class="gift__content">
+                  <h4 class="gift__category gift__category--work">For work</h4>
+                  <h3 class="gift__name">Console.log Guru</h3>
                 </div>
               </div>
-              <div class="best-gift">
-                <div class="best-gift__image">
+              <div class="gift" data-tab="health">
+                <div class="gift__image">
                   <img
                     src="src/img/gifts/gift-for-health.png"
-                    alt="gift-for-health"
-                  >
+                    alt="gift for health"
+                  />
                 </div>
-                <div class="best-gift__content">
-                  <h4 class="best-gift__category best-gift__category--health">
+                <div class="gift__content">
+                  <h4 class="gift__category gift__category--health">
                     For health
                   </h4>
-                  <h3 class="best-gift__name">Step Master</h3>
+                  <h3 class="gift__name">Step Master</h3>
                 </div>
               </div>
-              <div class="best-gift">
-                <div class="best-gift__image">
+              <div class="gift" data-tab="work">
+                <div class="gift__image">
                   <img
                     src="src/img/gifts/gift-for-work.png"
-                    alt="gift-for-work"
-                  >
+                    alt="gift for work"
+                  />
                 </div>
-                <div class="best-gift__content">
-                  <h4 class="best-gift__category best-gift__category--work">
-                    For work
-                  </h4>
-                  <h3 class="best-gift__name">Bug Magnet</h3>
+                <div class="gift__content">
+                  <h4 class="gift__category gift__category--work">For work</h4>
+                  <h3 class="gift__name">Bug Magnet</h3>
                 </div>
               </div>
-              <div class="best-gift">
-                <div class="best-gift__image">
+              <div class="gift" data-tab="work">
+                <div class="gift__image">
                   <img
                     src="src/img/gifts/gift-for-work.png"
-                    alt="gift-for-work"
-                  >
+                    alt="gift for work"
+                  />
                 </div>
-                <div class="best-gift__content">
-                  <h4 class="best-gift__category best-gift__category--work">
-                    For work
-                  </h4>
-                  <h3 class="best-gift__name">Shortcut Cheater</h3>
+                <div class="gift__content">
+                  <h4 class="gift__category gift__category--work">For work</h4>
+                  <h3 class="gift__name">Shortcut Cheater</h3>
                 </div>
               </div>
-              <div class="best-gift">
-                <div class="best-gift__image">
+              <div class="gift" data-tab="health">
+                <div class="gift__image">
                   <img
                     src="src/img/gifts/gift-for-health.png"
-                    alt="gift-for-health"
-                  >
+                    alt="gift for health"
+                  />
                 </div>
-                <div class="best-gift__content">
-                  <h4 class="best-gift__category best-gift__category--health">
+                <div class="gift__content">
+                  <h4 class="gift__category gift__category--health">
                     For health
                   </h4>
-                  <h3 class="best-gift__name">Posture Levitation</h3>
+                  <h3 class="gift__name">Posture Levitation</h3>
                 </div>
               </div>
-              <div class="best-gift">
-                <div class="best-gift__image">
+              <div class="gift" data-tab="harmony">
+                <div class="gift__image">
                   <img
                     src="src/img/gifts/gift-for-harmony.png"
-                    alt="gift-for-harmony"
-                  >
+                    alt="gift for harmony"
+                  />
                 </div>
-                <div class="best-gift__content">
-                  <h4 class="best-gift__category best-gift__category--harmony">
+                <div class="gift__content">
+                  <h4 class="gift__category gift__category--harmony">
                     For harmony
                   </h4>
-                  <h3 class="best-gift__name">Bug Acceptance Guru</h3>
+                  <h3 class="gift__name">Bug Acceptance Guru</h3>
                 </div>
               </div>
-              <div class="best-gift">
-                <div class="best-gift__image">
+              <div class="gift" data-tab="health">
+                <div class="gift__image">
                   <img
                     src="src/img/gifts/gift-for-health.png"
-                    alt="gift-for-health"
-                  >
+                    alt="gift for health"
+                  />
                 </div>
-                <div class="best-gift__content">
-                  <h4 class="best-gift__category best-gift__category--health">
+                <div class="gift__content">
+                  <h4 class="gift__category gift__category--health">
                     For health
                   </h4>
-                  <h3 class="best-gift__name">Snack Resister</h3>
+                  <h3 class="gift__name">Snack Resister</h3>
                 </div>
               </div>
-              <div class="best-gift">
-                <div class="best-gift__image">
+              <div class="gift" data-tab="harmony">
+                <div class="gift__image">
                   <img
                     src="src/img/gifts/gift-for-harmony.png"
-                    alt="gift-for-harmony"
-                  >
+                    alt="gift for harmony"
+                  />
                 </div>
-                <div class="best-gift__content">
-                  <h4 class="best-gift__category best-gift__category--harmony">
+                <div class="gift__content">
+                  <h4 class="gift__category gift__category--harmony">
                     For harmony
                   </h4>
-                  <h3 class="best-gift__name">Error Laugher</h3>
+                  <h3 class="gift__name">Error Laugher</h3>
                 </div>
               </div>
-              <div class="best-gift">
-                <div class="best-gift__image">
+              <div class="gift" data-tab="health">
+                <div class="gift__image">
                   <img
                     src="src/img/gifts/gift-for-health.png"
-                    alt="gift-for-health"
-                  >
+                    alt="gift for health"
+                  />
                 </div>
-                <div class="best-gift__content">
-                  <h4 class="best-gift__category best-gift__category--health">
+                <div class="gift__content">
+                  <h4 class="gift__category gift__category--health">
                     For health
                   </h4>
-                  <h3 class="best-gift__name">Hydration Bot</h3>
+                  <h3 class="gift__name">Hydration Bot</h3>
                 </div>
               </div>
-              <div class="best-gift">
-                <div class="best-gift__image">
+              <div class="gift" data-tab="work">
+                <div class="gift__image">
                   <img
                     src="src/img/gifts/gift-for-work.png"
-                    alt="gift-for-work"
-                  >
+                    alt="gift for work"
+                  />
                 </div>
-                <div class="best-gift__content">
-                  <h4 class="best-gift__category best-gift__category--work">
-                    For work
-                  </h4>
-                  <h3 class="best-gift__name">Merge Master</h3>
+                <div class="gift__content">
+                  <h4 class="gift__category gift__category--work">For work</h4>
+                  <h3 class="gift__name">Merge Master</h3>
                 </div>
               </div>
-              <div class="best-gift">
-                <div class="best-gift__image">
+              <div class="gift" data-tab="harmony">
+                <div class="gift__image">
                   <img
                     src="src/img/gifts/gift-for-harmony.png"
-                    alt="gift-for-harmony"
-                  >
+                    alt="gift for harmony"
+                  />
                 </div>
-                <div class="best-gift__content">
-                  <h4 class="best-gift__category best-gift__category--harmony">
+                <div class="gift__content">
+                  <h4 class="gift__category gift__category--harmony">
                     For harmony
                   </h4>
-                  <h3 class="best-gift__name">Joy Charger</h3>
+                  <h3 class="gift__name">Joy Charger</h3>
                 </div>
               </div>
-              <div class="best-gift">
-                <div class="best-gift__image">
+              <div class="gift" data-tab="harmony">
+                <div class="gift__image">
                   <img
                     src="src/img/gifts/gift-for-harmony.png"
-                    alt="gift-for-harmony"
-                  >
+                    alt="gift for harmony"
+                  />
                 </div>
-                <div class="best-gift__content">
-                  <h4 class="best-gift__category best-gift__category--harmony">
+                <div class="gift__content">
+                  <h4 class="gift__category gift__category--harmony">
                     For harmony
                   </h4>
-                  <h3 class="best-gift__name">
-                    Spontaneous Coding Philosopher
-                  </h3>
+                  <h3 class="gift__name">Spontaneous Coding Philosopher</h3>
                 </div>
               </div>
             </div>
@@ -297,5 +287,6 @@
         </div>
       </footer>
     </div>
+    <script src="src/index.js"></script>
   </body>
 </html>

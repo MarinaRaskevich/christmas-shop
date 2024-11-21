@@ -1,0 +1,70 @@
+@use "../abstracts" as *;
+
+.gift {
+  @include flex($direction: column, $align: center);
+  @extend %cursor-pointer;
+  @extend %transition;
+  width: 31rem;
+  height: 34.2rem;
+  border-radius: 2rem;
+  background: $color-content-background;
+  &:hover {
+    .gift__name {
+      color: $color-primary;
+    }
+    @include media-tablet {
+      .gift__name {
+        color: $color-dark;
+        cursor: default;
+      }
+    }
+  }
+  &_hidden {
+    display: none;
+  }
+}
+
+.gift__image {
+  @include flex($align: center);
+  width: 31rem;
+  height: 23rem;
+  flex-shrink: 0;
+  border-radius: 2rem;
+
+  img {
+    border-radius: 2rem;
+    width: 100%;
+  }
+}
+
+.gift__content {
+  @include flex($direction: column, $align: flex-start, $gap: 0.8rem);
+  padding: 2rem;
+  flex: 1 0 0;
+  align-self: stretch;
+  background-color: $color-light;
+  border-radius: 2rem;
+}
+
+.gift__category--work {
+  color: $color-work-tag;
+}
+
+.gift__category--health {
+  color: $color-health-tag;
+}
+
+.gift__category--harmony {
+  color: $color-harmony-tag;
+}
+
+.gift__name {
+  @extend %transition;
+  color: $color-dark;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  align-self: stretch;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

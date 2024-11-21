@@ -176,11 +176,11 @@ summary {
   display: list-item;
 }
 
-.contact, .footer__caption, .icon, .tab, .best-gift__name, .best-gift, .navigation__link, .hamburger, .hamburger__line, .button, .slider-arrow {
+.contact, .footer__caption, .icon, .tab, .navigation__link, .gift, .gift__name, .hamburger, .hamburger__line, .button, .slider-arrow {
   transition: all 0.4s ease-out;
 }
 
-.contact, .footer__caption, .icon, .tab, .best-gift, .navigation__link, .button, .slider-arrow {
+.contact, .footer__caption, .icon, .tab, .navigation__link, .gift, .button, .slider-arrow {
   cursor: pointer;
 }
 
@@ -472,6 +472,82 @@ ul {
   width: 2rem;
   background-color: #181c29;
   height: 0.1rem;
+}
+
+.gift {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+  width: 31rem;
+  height: 34.2rem;
+  border-radius: 2rem;
+  background: #ecf3f8;
+}
+.gift:hover .gift__name {
+  color: #ff4646;
+}
+@media (max-width: 768px) {
+  .gift:hover .gift__name {
+    color: #181c29;
+    cursor: default;
+  }
+}
+.gift_hidden {
+  display: none;
+}
+
+.gift__image {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+  width: 31rem;
+  height: 23rem;
+  flex-shrink: 0;
+  border-radius: 2rem;
+}
+.gift__image img {
+  border-radius: 2rem;
+  width: 100%;
+}
+
+.gift__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  gap: 0.8rem;
+  padding: 2rem;
+  flex: 1 0 0;
+  align-self: stretch;
+  background-color: #ffffff;
+  border-radius: 2rem;
+}
+
+.gift__category--work {
+  color: #4361ff;
+}
+
+.gift__category--health {
+  color: #06a44f;
+}
+
+.gift__category--harmony {
+  color: #ff43f7;
+}
+
+.gift__name {
+  color: #181c29;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  align-self: stretch;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .navigation {
@@ -784,84 +860,11 @@ a {
   color: #ffffff;
 }
 
-.best-gifts-container {
+.gifts-container {
   align-self: stretch;
   justify-content: center;
   align-items: flex-start;
   align-content: flex-start;
-}
-
-.best-gift {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  flex-wrap: nowrap;
-  width: 31rem;
-  height: 34.2rem;
-  border-radius: 2rem;
-  background: #ecf3f8;
-}
-.best-gift:hover .best-gift__name {
-  color: #ff4646;
-}
-@media (max-width: 768px) {
-  .best-gift:hover .best-gift__name {
-    color: #181c29;
-    cursor: default;
-  }
-}
-
-.best-gift__image {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-  flex-wrap: nowrap;
-  width: 31rem;
-  height: 23rem;
-  flex-shrink: 0;
-  border-radius: 2rem;
-}
-.best-gift__image img {
-  border-radius: 2rem;
-  width: 100%;
-}
-
-.best-gift__content {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  flex-wrap: nowrap;
-  gap: 0.8rem;
-  padding: 2rem;
-  flex: 1 0 0;
-  align-self: stretch;
-  background-color: #ffffff;
-  border-radius: 2rem;
-}
-
-.best-gift__category--work {
-  color: #4361ff;
-}
-
-.best-gift__category--health {
-  color: #06a44f;
-}
-
-.best-gift__category--harmony {
-  color: #ff43f7;
-}
-
-.best-gift__name {
-  color: #181c29;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
-  align-self: stretch;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
 .cta {
@@ -993,11 +996,11 @@ a {
   border-radius: 1.2rem;
   color: #ffffff;
 }
-.tab:hover {
+.tab:hover:not(.tab_selected) {
   background: rgba(255, 255, 255, 0.2);
 }
 @media (max-width: 768px) {
-  .tab:hover {
+  .tab:hover:not(.tab_selected) {
     background: transparent;
     cursor: default;
   }
