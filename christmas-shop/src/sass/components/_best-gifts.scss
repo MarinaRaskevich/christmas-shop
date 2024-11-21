@@ -44,10 +44,16 @@
   width: 31rem;
   height: 34.2rem;
   border-radius: 2rem;
-  background: $color-light;
+  background: $color-content-background;
   &:hover {
     .best-gift__name {
       color: $color-primary;
+    }
+    @include media-tablet {
+      .best-gift__name {
+        color: $color-dark;
+        cursor: default;
+      }
     }
   }
 }
@@ -57,7 +63,6 @@
   width: 31rem;
   height: 23rem;
   flex-shrink: 0;
-  background: $color-content-background;
   border-radius: 2rem;
 
   img {
@@ -71,6 +76,8 @@
   padding: 2rem;
   flex: 1 0 0;
   align-self: stretch;
+  background-color: $color-light;
+  border-radius: 2rem;
 }
 
 .best-gift__category--work {

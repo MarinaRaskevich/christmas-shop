@@ -1,3 +1,5 @@
+@use "./constants" as const;
+
 @mixin font(
   $size,
   $height: $size,
@@ -38,5 +40,29 @@
 
   @if $gap != null {
     gap: $gap;
+  }
+}
+
+@mixin media-laptop {
+  @media (max-width: const.$content-width) {
+    @content;
+  }
+}
+
+@mixin media-tablet {
+  @media (max-width: const.$tablet-width) {
+    @content;
+  }
+}
+
+@mixin media-mobile-big {
+  @media (max-width: const.$mobile-big-width) {
+    @content;
+  }
+}
+
+@mixin media-mobile {
+  @media (max-width: const.$mobile-width) {
+    @content;
   }
 }

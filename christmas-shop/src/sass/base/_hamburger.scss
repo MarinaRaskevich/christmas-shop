@@ -1,0 +1,23 @@
+@use "../abstracts" as *;
+
+.hamburger {
+  display: none;
+  @extend %transition;
+  @include media-tablet {
+    @include flex(
+      $direction: column,
+      $justify: center,
+      $align: center,
+      $gap: 0.6rem
+    );
+    width: 4rem;
+    height: 4rem;
+  }
+}
+
+.hamburger__line {
+  width: 2rem;
+  background-color: $color-dark;
+  height: 0.1rem;
+  @extend %transition;
+}

@@ -34,6 +34,12 @@
   @include flex($justify: flex-end, $align: center);
   flex: 1 0 0;
   align-self: stretch;
+  @include media-tablet {
+    display: none;
+  }
+  @include media-mobile {
+    display: none;
+  }
 }
 
 a {

@@ -33,6 +33,9 @@
   color: $color-dark;
   &:hover {
     color: $color-primary;
+    @include media-tablet {
+      color: $color-dark;
+    }
   }
   padding: 2rem;
   flex: 1 0 0;
@@ -59,8 +62,13 @@
   text-decoration: none;
   color: inherit;
   @extend %transition;
+  @extend %cursor-pointer;
   &:hover {
     color: $color-primary;
+    @include media-tablet {
+      cursor: default;
+      color: inherit;
+    }
   }
 }
 
@@ -92,6 +100,24 @@
 
     .ico_x {
       background-image: url("../img/icons/x-hover.svg");
+    }
+    @include media-tablet {
+      cursor: default;
+      .ico_telegram {
+        background-image: url("../img/icons/telegram.svg");
+      }
+
+      .ico_facebook {
+        background-image: url("../img/icons/facebook.svg");
+      }
+
+      .ico_instagram {
+        background-image: url("../img/icons/instagram.svg");
+      }
+
+      .ico_x {
+        background-image: url("../img/icons/x.svg");
+      }
     }
   }
 }
