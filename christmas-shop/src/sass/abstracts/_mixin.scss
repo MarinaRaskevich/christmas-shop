@@ -55,6 +55,12 @@
   }
 }
 
+@mixin media-mobile-big {
+  @media (max-width: const.$mobile-big-width) {
+    @content;
+  }
+}
+
 @mixin media-mobile {
   @media (max-width: const.$mobile-width) {
     @content;

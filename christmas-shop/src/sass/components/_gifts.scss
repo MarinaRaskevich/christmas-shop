@@ -21,7 +21,7 @@
 
 .gifts__tabs {
   @include flex($align: center, $gap: 0.8rem);
-  @include media-mobile {
+  @include media-mobile-big {
     @include flex($gap: 0rem);
   }
 }
@@ -35,12 +35,16 @@
   color: $color-light;
   &:hover {
     background: $color-tab-hoovered;
+    @include media-tablet {
+      background: transparent;
+      cursor: default;
+    }
   }
   &_selected {
     background: $color-tab-hoovered;
     pointer-events: none;
   }
-  @include media-mobile {
+  @include media-mobile-big {
     padding: 1.2rem 0.8rem;
   }
 }

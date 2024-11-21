@@ -49,6 +49,12 @@
     .best-gift__name {
       color: $color-primary;
     }
+    @include media-tablet {
+      .best-gift__name {
+        color: $color-dark;
+        cursor: default;
+      }
+    }
   }
 }
 

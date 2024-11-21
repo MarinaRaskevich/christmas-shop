@@ -12,6 +12,11 @@
     &:hover {
       background: $color-light;
       color: $color-dark;
+      @include media-tablet {
+        background: $color-dark;
+        color: $color-light;
+        cursor: default;
+      }
     }
   }
 }
@@ -34,6 +39,18 @@
       background-image: url("../img/icons/arrow-left-hover.svg");
     }
     background: $color-light;
+
+    @include media-tablet {
+      .ico_arrow-left {
+        background-image: url("../img/icons/arrow-left.svg");
+      }
+
+      .ico_arrow-right {
+        background-image: url("../img/icons/arrow-right.svg");
+      }
+      background-color: transparent;
+      cursor: default;
+    }
   }
   &_inactive {
     .ico_arrow-right {
