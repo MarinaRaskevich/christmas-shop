@@ -46,6 +46,11 @@
   border-radius: 2rem;
 }
 
+.gift__description {
+  color: $color-dark;
+  align-self: stretch;
+}
+
 .gift__category--work {
   color: $color-work-tag;
 }
@@ -67,4 +72,51 @@
   align-self: stretch;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+//GIFT MODAL DATA
+.gift-modal__image {
+  @include flex($direction: column, $align: center, $justify: center);
+  height: 23rem;
+  align-self: stretch;
+  border-radius: 2rem;
+  flex-shrink: 0;
+  overflow: hidden;
+  img {
+    border-radius: 2rem;
+    width: 100%;
+    flex: 1 0 0;
+    align-self: stretch;
+  }
+}
+
+.gift-modal__content {
+  @include flex($direction: column, $align: flex-start, $gap: 2rem);
+  align-self: stretch;
+  border-radius: 20px;
+  background: $color-light;
+}
+
+.gift__superpowers {
+  padding: 0 2rem 2rem 2rem;
+  align-self: stretch;
+}
+
+.superpowers-container {
+  @include flex($direction: column, $align: flex-start);
+  align-self: stretch;
+}
+
+.superpower {
+  @include flex($align: center, $gap: 1.2rem);
+  align-self: stretch;
+  color: $color-dark;
+}
+
+.superpower__name {
+  flex: 1 0 0;
+}
+
+.superpower__showflakes {
+  @include flex($align: flex-start, $gap: 0.8rem);
 }

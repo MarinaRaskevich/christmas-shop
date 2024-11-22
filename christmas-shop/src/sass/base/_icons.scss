@@ -10,6 +10,11 @@
   height: 8rem;
 }
 
+.ico-modal {
+  width: 1.6rem;
+  height: 1.6rem;
+}
+
 .ico_arrow-left {
   background-image: url("../img/icons/arrow-left.svg");
 }
@@ -48,4 +53,12 @@
 
 .ico_snake {
   background-image: url("../img/icons/snake.svg");
+}
+
+.ico_snowflake {
+  background-image: url("../img/modal/snowflake.svg");
+}
+
+.ico_snowflake-transparent {
+  background-image: url("../img/modal/snowflake-transparent.svg");
 }

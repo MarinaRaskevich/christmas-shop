@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "style": "sass --watch src/sass/style.scss src/sass/style.css"
+    "style": "sass --watch src/sass/style.scss src/sass/style.css",
+    "dev": "webpack --mode development",
+    "prod": "webpack --mode production"
   },
   "author": "MarinaRaskevich",
   "license": "ISC",

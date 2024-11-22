@@ -1,4 +1,6 @@
-import { Gift } from "./js/Gift";
+import { Gift } from "./js/Gift.js";
+import { GiftModal } from "./js/GiftModal.js";
+import data from "./json/gifts.json";
 
 window.onload = function () {
   const bodyId = document.body.id;
@@ -29,6 +31,7 @@ const addTabsClickHandler = () => {
   });
 };
 
+//Remove class "tab_selected" from tab
 const removeSelectedTabs = () => {
   let tabs = document.querySelectorAll(".gifts__tabs .tab");
   tabs.forEach((tab) => {
@@ -36,6 +39,7 @@ const removeSelectedTabs = () => {
   });
 };
 
+//Add class "tab_selected" to tab
 const selectClickedTab = (clickedTab) => {
   clickedTab.classList.add("tab_selected");
 };
@@ -59,15 +63,52 @@ const filterGiftsBySelectedTab = (selectedTab) => {
 
 const renderGiftsToDom = () => {
   let giftsContainer = getGiftsContainer();
-  generateArticles(data).forEach((article) => {
-    strategiesWrapper.append(article.generateArticle());
+  const shuffledData = shuffleCards(data);
+  generateGifts(shuffledData).forEach((gift) => {
+    giftsContainer.append(gift.generateGiftCard());
   });
 
-  addStrategyClickHandler();
+  addGiftClickHandler();
 };
 
 const getGiftsContainer = () => {
-  const strategiesConstainer = document.querySelector(".strategy-wrapper");
-  strategiesConstainer.innerHTML = "";
-  return strategiesConstainer;
+  const giftsContainer = document.querySelector(".gifts-container");
+  giftsContainer.innerHTML = "";
+  return giftsContainer;
+};
+
+const generateGifts = (data) => {
+  let gifts = [];
+  data.forEach((gift) => {
+    gifts.push(new Gift(gift));
+  });
+  return gifts;
+};
+
+const shuffleCards = (array) => {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
+};
+
+const addGiftClickHandler = () => {
+  document.querySelector(".gifts-container").addEventListener("click", (e) => {
+    if (e.target.closest(".gift")) {
+      let clickedGiftName = e.target.closest(".gift").getAttribute("data-name");
+      let clickedGiftData = getClickedData(clickedGiftName);
+
+      renderGiftModal(clickedGiftData);
+    }
+  });
+};
+
+const getClickedData = (name) => {
+  return data.find((gift) => gift.name == name);
+};
+
+const renderGiftModal = (giftData) => {
+  let modal = new GiftModal("gift-modal", giftData);
+  modal.renderModal();
 };

@@ -31,14 +31,14 @@
   flex-basis: 1 1 calc((100% - 24px) / 3);
   max-width: calc((100% - 24px) / 3);
   color: $color-dark;
+  padding: 2rem;
+  flex: 1 0 0;
   &:hover {
     color: $color-primary;
     @include media-tablet {
       color: $color-dark;
     }
   }
-  padding: 2rem;
-  flex: 1 0 0;
 }
 
 @media (max-width: 1200px) {

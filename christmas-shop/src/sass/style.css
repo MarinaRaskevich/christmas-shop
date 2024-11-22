@@ -412,6 +412,11 @@ ul {
   height: 8rem;
 }
 
+.ico-modal {
+  width: 1.6rem;
+  height: 1.6rem;
+}
+
 .ico_arrow-left {
   background-image: url("../img/icons/arrow-left.svg");
 }
@@ -450,6 +455,14 @@ ul {
 
 .ico_snake {
   background-image: url("../img/icons/snake.svg");
+}
+
+.ico_snowflake {
+  background-image: url("../img/modal/snowflake.svg");
+}
+
+.ico_snowflake-transparent {
+  background-image: url("../img/modal/snowflake-transparent.svg");
 }
 
 .hamburger {
@@ -528,6 +541,11 @@ ul {
   border-radius: 2rem;
 }
 
+.gift__description {
+  color: #181c29;
+  align-self: stretch;
+}
+
 .gift__category--work {
   color: #4361ff;
 }
@@ -548,6 +566,111 @@ ul {
   align-self: stretch;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.gift-modal__image {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  height: 23rem;
+  align-self: stretch;
+  border-radius: 2rem;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+.gift-modal__image img {
+  border-radius: 2rem;
+  width: 100%;
+  flex: 1 0 0;
+  align-self: stretch;
+}
+
+.gift-modal__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  gap: 2rem;
+  align-self: stretch;
+  border-radius: 20px;
+  background: #ffffff;
+}
+
+.gift__superpowers {
+  padding: 0 2rem 2rem 2rem;
+  align-self: stretch;
+}
+
+.superpowers-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  align-self: stretch;
+}
+
+.superpower {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 1.2rem;
+  align-self: stretch;
+  color: #181c29;
+}
+
+.superpower__name {
+  flex: 1 0 0;
+}
+
+.superpower__showflakes {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  gap: 0.8rem;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(24, 28, 41, 0.8);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.modal {
+  position: relative;
+  border-radius: 20px;
+  background-color: #ecf3f8;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  max-width: 40rem;
+  flex: 1 0 0;
+}
+
+.modal__close-icon {
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
 }
 
 .navigation {

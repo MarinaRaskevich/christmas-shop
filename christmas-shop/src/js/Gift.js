@@ -1,35 +1,45 @@
+import giftForWork from "../img/gifts/gift-for-work.png";
+import giftForHealth from "../img/gifts/gift-for-health.png";
+import giftForHarmony from "../img/gifts/gift-for-harmony.png";
+
+const images = {
+  work: giftForWork,
+  harmony: giftForHarmony,
+  health: giftForHealth,
+};
+
 export class Gift {
-  constructor({ name, description, category, superpowers, ...rest }) {
+  constructor({ name, description, category, ...rest }) {
     this.name = name;
     this.description = description;
     this.category = category;
-    this.superpowers = superpowers;
   }
 
   // Article generator
-  generateGift() {
+  generateGiftCard() {
     let template = "";
     let gift = document.createElement("div");
     gift.classList.add("gift");
-    //gift.setAttribute("data-id", this.id);
+    gift.setAttribute("data-name", this.name);
 
     let categoryTag;
     switch (this.category) {
       case "For Work":
-        template += `<div class="gift__image"><img src="src/img/gifts/gift-for-work.png" alt="gift for work"></div>`;
         categoryTag = "work";
         break;
 
       case "For Health":
-        template += `<div class="gift__image"><img src="src/img/gifts/gift-for-health.png" alt="gift for health"></div>`;
         categoryTag = "health";
         break;
 
       case "For Harmony":
-        template += `<div class="gift__image"><img src="src/img/gifts/gift-for-harmony.png" alt="gift for harmony"></div>`;
         categoryTag = "harmony";
         break;
     }
+
+    gift.setAttribute("data-tab", categoryTag);
+
+    template += `<div class="gift__image"><img src="${images[categoryTag]}" alt="gift for ${categoryTag}"></div>`;
 
     template += `<div class="gift__content">
                   <h4 class="gift__category gift__category--${categoryTag}">
