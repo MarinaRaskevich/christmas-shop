@@ -458,11 +458,11 @@ ul {
 }
 
 .ico_snowflake {
-  background-image: url("../img/modal/snowflake.svg");
+  background-image: url("../img/snowflake.svg");
 }
 
 .ico_snowflake-transparent {
-  background-image: url("../img/modal/snowflake-transparent.svg");
+  background-image: url("../img/snowflake-transparent.svg");
 }
 
 .hamburger {
@@ -597,10 +597,26 @@ ul {
   align-self: stretch;
   border-radius: 20px;
   background: #ffffff;
+  padding: 2rem;
 }
 
-.gift__superpowers {
-  padding: 0 2rem 2rem 2rem;
+.gift-modal__information {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  gap: 0.8rem;
+  align-self: stretch;
+}
+
+.gift-modal__superpowers {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  gap: 0.8rem;
   align-self: stretch;
 }
 
@@ -638,6 +654,7 @@ ul {
 }
 
 .overlay {
+  padding: 0 0.8rem;
   position: fixed;
   top: 0;
   left: 0;

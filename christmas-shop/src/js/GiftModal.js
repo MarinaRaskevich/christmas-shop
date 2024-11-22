@@ -39,7 +39,7 @@ export class GiftModal extends Modal {
 
     if (this.name || this.category || this.description || this.superpowers) {
       giftModalContent += `<div class="gift-modal__content">`;
-      giftModalContent += `<div class="gift__content">`;
+      giftModalContent += `<div class="gift-modal__information">`;
 
       this.category &&
         (giftModalContent += `<h4 class="gift__category gift__category--work">${this.category}</h4>`);
@@ -51,7 +51,7 @@ export class GiftModal extends Modal {
         (giftModalContent += `<p class="gift__description">${this.description}</p>`);
 
       giftModalContent += `</div>`;
-      giftModalContent += `<div class="gift__superpowers"><h4>Adds superpowers to:</h4>`;
+      giftModalContent += `<div class="gift-modal__superpowers"><h4>Adds superpowers to:</h4>`;
 
       if (this.superpowers) {
         giftModalContent += `<div class="superpowers-container">`;
@@ -67,7 +67,7 @@ export class GiftModal extends Modal {
             const points = parseInt(this.superpowers[key], 10);
             for (let index = 0; index < 500; index += 100) {
               if (points - index > 0) {
-                giftModalContent += `<span class="ico-modal ico-snowflake"></span>`;
+                giftModalContent += `<span class="ico-modal ico_snowflake"></span>`;
               } else {
                 giftModalContent += `<span class="ico-modal ico_snowflake-transparent"></span>`;
               }
@@ -88,7 +88,6 @@ export class GiftModal extends Modal {
 
   renderModal() {
     let content = this.generateContent();
-    console.log(content);
     super.buildModal(content);
   }
 

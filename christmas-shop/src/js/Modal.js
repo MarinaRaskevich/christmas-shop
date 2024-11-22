@@ -78,8 +78,11 @@ export class Modal {
   }
 
   closeModal(e) {
-    let classes = e.target.classList;
-    if (classes.contains("overlay") || classes.contains("modal__close-icon")) {
+    let element = e.target;
+    if (
+      element.classList.contains("overlay") ||
+      element.closest(".modal__close-icon")
+    ) {
       document.querySelector(".overlay").remove();
     }
   }
