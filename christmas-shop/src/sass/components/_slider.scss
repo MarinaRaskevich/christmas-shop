@@ -31,7 +31,12 @@
 }
 
 .slider__track {
+  @extend %transition;
   @include flex($align: center, $gap: 2.12rem);
+}
+
+.slider__item {
+  flex-shrink: 0;
 }
 
 .slider__item__image {

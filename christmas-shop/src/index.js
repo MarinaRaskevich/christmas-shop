@@ -2,17 +2,23 @@ import { Gift } from "./js/Gift.js";
 import { GiftModal } from "./js/GiftModal.js";
 import data from "./json/gifts.json";
 
+const bodyId = document.body.id;
+
 window.onload = function () {
-  const bodyId = document.body.id;
+  renderGiftsToDom();
+
   if (bodyId === "gifts") {
-    // Render gifts
-    renderGiftsToDom();
     // Tabs
     addTabsClickHandler();
+
+    if (window.innerWidth <= 768) {
+      handleScrollBackToTop();
+    }
   }
 
   if (bodyId === "home") {
-    addArticles();
+    updateTimer();
+    initializeSlider();
   }
 };
 
@@ -63,7 +69,11 @@ const filterGiftsBySelectedTab = (selectedTab) => {
 
 const renderGiftsToDom = () => {
   let giftsContainer = getGiftsContainer();
-  const shuffledData = shuffleCards(data);
+  let shuffledData = shuffleCards(data);
+  // If it's home page, we have only first 4 cards
+  if (bodyId === "home") {
+    shuffledData = shuffledData.slice(0, 4);
+  }
   generateGifts(shuffledData).forEach((gift) => {
     giftsContainer.append(gift.generateGiftCard());
   });
@@ -111,4 +121,141 @@ const getClickedData = (name) => {
 const renderGiftModal = (giftData) => {
   let modal = new GiftModal("gift-modal", giftData);
   modal.renderModal();
+};
+
+// Back to top button
+const handleScrollBackToTop = () => {
+  const backToTopButton = document.querySelector(".back-to-top");
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 100) {
+      backToTopButton.classList.remove("back-to-top_hidden");
+    } else {
+      backToTopButton.classList.add("back-to-top_hidden");
+    }
+  });
+
+  backToTopButton.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  });
+};
+
+// Timer
+const calculateTimeLeft = () => {
+  const nowTs = new Date();
+  let christmasTs = new Date(Date.UTC(nowTs.getUTCFullYear(), 11, 31, 0, 0, 0));
+
+  if (nowTs > christmasTs) {
+    christmasTs.setUTCFullYear(christmasTs.getUTCFullYear() + 1);
+  }
+
+  const timeDifference = christmasTs - nowTs;
+  const totalSeconds = Math.floor(timeDifference / 1000);
+
+  const days = Math.floor(totalSeconds / (24 * 60 * 60));
+  const hours = Math.floor((totalSeconds % (24 * 60 * 60)) / (60 * 60));
+  const minutes = Math.floor((totalSeconds % (60 * 60)) / 60);
+  const seconds = totalSeconds % 60;
+
+  return { days, hours, minutes, seconds };
+};
+
+const updateTimeNumbers = ({ days, hours, minutes, seconds }) => {
+  document.querySelector(".timer__number--days").textContent = days;
+  document.querySelector(".timer__number--hours").textContent = hours;
+  document.querySelector(".timer__number--minutes").textContent = minutes;
+  document.querySelector(".timer__number--seconds").textContent = seconds;
+};
+
+const updateTimer = () => {
+  const timeLeft = calculateTimeLeft();
+  updateTimeNumbers(timeLeft);
+};
+
+setInterval(updateTimer, 1000);
+
+//slider
+let currentIndex = 0;
+const initializeSlider = () => {
+  const sliderTrack = slider.querySelector(".slider__track");
+  const leftArrow = slider.querySelector(".slider-arrow__left");
+  const rightArrow = slider.querySelector(".slider-arrow__right");
+
+  let clickLength = calculateClickLength();
+
+  updateArrowStates(currentIndex);
+
+  leftArrow.addEventListener("click", () => {
+    if (!leftArrow.classList.contains("slider-arrow_inactive")) {
+      moveSlider(sliderTrack, clickLength, "left");
+    }
+  });
+
+  rightArrow.addEventListener("click", () => {
+    if (!rightArrow.classList.contains("slider-arrow_inactive")) {
+      moveSlider(sliderTrack, clickLength, "right");
+    }
+  });
+
+  window.addEventListener("resize", () => {
+    clickLength = calculateClickLength();
+    updateArrowStates(currentIndex);
+  });
+};
+
+const moveSlider = (sliderTrack, clickLength, direction) => {
+  if (direction === "left" && currentIndex > 0) {
+    currentIndex--;
+  } else if (direction === "right") {
+    currentIndex++;
+  }
+
+  sliderTrack.style.transform = `translateX(-${currentIndex * clickLength}px)`;
+
+  updateArrowStates(currentIndex);
+};
+
+const updateArrowStates = (currentIndex) => {
+  const leftArrow = slider.querySelector(".slider-arrow__left");
+  const rightArrow = slider.querySelector(".slider-arrow__right");
+  const clickNumbers = updateClickNumbers();
+
+  if (currentIndex < 1) {
+    leftArrow.classList.add("slider-arrow_inactive");
+  } else {
+    leftArrow.classList.remove("slider-arrow_inactive");
+  }
+
+  if (currentIndex >= clickNumbers) {
+    rightArrow.classList.add("slider-arrow_inactive");
+  } else {
+    rightArrow.classList.remove("slider-arrow_inactive");
+  }
+};
+
+const updateClickNumbers = () => {
+  return window.innerWidth > 768 ? 3 : 6;
+};
+
+const calculateClickLength = () => {
+  const sliderRow = document.querySelector(".slider__row");
+  const sliderTrack = document.querySelector(".slider__track");
+
+  // Total width of the slider
+  const totalWidth = sliderTrack.offsetWidth;
+
+  // Visible area
+  const visibleWidth = sliderRow.offsetWidth;
+
+  //Click numbers
+  const clickNumbers = updateClickNumbers();
+
+  // window.addEventListener("resize", () => {
+  //   updateItemsToScroll();
+  // });
+
+  return (totalWidth - visibleWidth) / clickNumbers;
 };

@@ -1,5 +1,9 @@
 @use "../abstracts" as *;
 
+body.modal-open {
+  overflow: hidden;
+}
+
 .overlay {
   padding: 0 0.8rem;
   position: fixed;
@@ -27,7 +31,7 @@
   width: 40px;
   height: 40px;
   cursor: pointer;
-  //   svg {
-  //     pointer-events: none;
-  //   }
+  svg {
+    pointer-events: none;
+  }
 }
