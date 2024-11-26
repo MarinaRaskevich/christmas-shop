@@ -331,15 +331,10 @@ ul {
   background: #181c29;
   color: #ffffff;
 }
-.button_colored:hover {
-  background: #ffffff;
-  color: #181c29;
-}
-@media (max-width: 768px) {
+@media (hover: hover) {
   .button_colored:hover {
-    background: #181c29;
-    color: #ffffff;
-    cursor: default;
+    background: #ffffff;
+    color: #181c29;
   }
 }
 
@@ -356,25 +351,15 @@ ul {
   width: 5.6rem;
   height: 5.6rem;
 }
-.slider-arrow:hover {
-  background: #ffffff;
-}
-.slider-arrow:hover .ico_arrow-right {
-  background-image: url("../img/icons/arrow-right-hover.svg");
-}
-.slider-arrow:hover .ico_arrow-left {
-  background-image: url("../img/icons/arrow-left-hover.svg");
-}
-@media (max-width: 768px) {
+@media (hover: hover) {
   .slider-arrow:hover {
-    background-color: transparent;
-    cursor: default;
-  }
-  .slider-arrow:hover .ico_arrow-left {
-    background-image: url("../img/icons/arrow-left.svg");
+    background: #ffffff;
   }
   .slider-arrow:hover .ico_arrow-right {
-    background-image: url("../img/icons/arrow-right.svg");
+    background-image: url("../img/icons/arrow-right-hover.svg");
+  }
+  .slider-arrow:hover .ico_arrow-left {
+    background-image: url("../img/icons/arrow-left-hover.svg");
   }
 }
 .slider-arrow_inactive {
@@ -493,11 +478,13 @@ ul {
 .navigation__link a {
   color: #181c29;
 }
-.navigation__link:hover {
-  background-color: rgba(255, 70, 70, 0.1019607843);
-}
-.navigation__link:hover a {
-  color: #ff4646;
+@media (hover: hover) {
+  .navigation__link:hover {
+    background-color: rgba(255, 70, 70, 0.1019607843);
+  }
+  .navigation__link:hover a {
+    color: #ff4646;
+  }
 }
 .navigation__link_active {
   pointer-events: none;
@@ -802,13 +789,9 @@ a {
   border-radius: 2rem;
   background: #ecf3f8;
 }
-.best-gift:hover .best-gift__name {
-  color: #ff4646;
-}
-@media (max-width: 768px) {
+@media (hover: hover) {
   .best-gift:hover .best-gift__name {
-    color: #181c29;
-    cursor: default;
+    color: #ff4646;
   }
 }
 
@@ -993,13 +976,9 @@ a {
   border-radius: 1.2rem;
   color: #ffffff;
 }
-.tab:hover {
-  background: rgba(255, 255, 255, 0.2);
-}
-@media (max-width: 768px) {
+@media (hover: hover) {
   .tab:hover {
-    background: transparent;
-    cursor: default;
+    background: rgba(255, 255, 255, 0.2);
   }
 }
 .tab_selected {
@@ -1130,12 +1109,9 @@ a {
   padding: 2rem;
   flex: 1 0 0;
 }
-.contact:hover {
-  color: #ff4646;
-}
-@media (max-width: 768px) {
+@media (hover: hover) {
   .contact:hover {
-    color: #181c29;
+    color: #ff4646;
   }
 }
 
@@ -1169,13 +1145,9 @@ a {
   text-decoration: none;
   color: inherit;
 }
-.footer__caption:hover {
-  color: #ff4646;
-}
-@media (max-width: 768px) {
+@media (hover: hover) {
   .footer__caption:hover {
-    cursor: default;
-    color: inherit;
+    color: #ff4646;
   }
 }
 
@@ -1199,33 +1171,18 @@ a {
   width: 4rem;
   height: 4rem;
 }
-.icon:hover .ico_telegram {
-  background-image: url("../img/icons/telegram-hover.svg");
-}
-.icon:hover .ico_facebook {
-  background-image: url("../img/icons/facebook-hover.svg");
-}
-.icon:hover .ico_instagram {
-  background-image: url("../img/icons/instagram-hover.svg");
-}
-.icon:hover .ico_x {
-  background-image: url("../img/icons/x-hover.svg");
-}
-@media (max-width: 768px) {
-  .icon:hover {
-    cursor: default;
-  }
+@media (hover: hover) {
   .icon:hover .ico_telegram {
-    background-image: url("../img/icons/telegram.svg");
+    background-image: url("../img/icons/telegram-hover.svg");
   }
   .icon:hover .ico_facebook {
-    background-image: url("../img/icons/facebook.svg");
+    background-image: url("../img/icons/facebook-hover.svg");
   }
   .icon:hover .ico_instagram {
-    background-image: url("../img/icons/instagram.svg");
+    background-image: url("../img/icons/instagram-hover.svg");
   }
   .icon:hover .ico_x {
-    background-image: url("../img/icons/x.svg");
+    background-image: url("../img/icons/x-hover.svg");
   }
 }
 
