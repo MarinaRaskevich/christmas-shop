@@ -3,6 +3,10 @@
 .navigation {
   @include flex($align: center, $gap: 0.8rem);
   padding-left: 0;
+  @include media-tablet {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
 }
 
 .navigation__link {
@@ -35,10 +39,22 @@
   flex: 1 0 0;
   align-self: stretch;
   @include media-tablet {
-    display: none;
-  }
-  @include media-mobile {
-    display: none;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: calc(100vh - 5rem);
+    background-color: $color-light;
+    z-index: 1000;
+    transition: right 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &.active {
+      right: 0; // Показываем меню
+      height: 100%;
+    }
   }
 }
 

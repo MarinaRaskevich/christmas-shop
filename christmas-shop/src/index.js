@@ -17,8 +17,12 @@ window.onload = function () {
   }
 
   if (bodyId === "home") {
-    updateTimer();
+    // updateTimer();
     initializeSlider();
+    setInterval(updateTimer, 1000);
+    window.addEventListener("resize", () => {
+      resetSlider();
+    });
   }
 };
 
@@ -175,16 +179,34 @@ const updateTimer = () => {
   updateTimeNumbers(timeLeft);
 };
 
-setInterval(updateTimer, 1000);
-
 //slider
+const updateClickNumbers = () => {
+  return window.innerWidth > 768 ? 3 : 6;
+};
+
+const calculateClickLength = () => {
+  const sliderRow = document.querySelector(".slider__row");
+  const sliderTrack = document.querySelector(".slider__track");
+
+  // Total width of the slider
+  const totalWidth = sliderTrack.offsetWidth;
+
+  // Visible area
+  const visibleWidth = sliderRow.offsetWidth;
+
+  //Click numbers
+  const clickNumbers = updateClickNumbers();
+
+  return (totalWidth - visibleWidth) / clickNumbers;
+};
+
 let currentIndex = 0;
+let clickLength = calculateClickLength();
+
 const initializeSlider = () => {
   const sliderTrack = slider.querySelector(".slider__track");
   const leftArrow = slider.querySelector(".slider-arrow__left");
   const rightArrow = slider.querySelector(".slider-arrow__right");
-
-  let clickLength = calculateClickLength();
 
   updateArrowStates(currentIndex);
 
@@ -198,11 +220,6 @@ const initializeSlider = () => {
     if (!rightArrow.classList.contains("slider-arrow_inactive")) {
       moveSlider(sliderTrack, clickLength, "right");
     }
-  });
-
-  window.addEventListener("resize", () => {
-    clickLength = calculateClickLength();
-    updateArrowStates(currentIndex);
   });
 };
 
@@ -236,26 +253,39 @@ const updateArrowStates = (currentIndex) => {
   }
 };
 
-const updateClickNumbers = () => {
-  return window.innerWidth > 768 ? 3 : 6;
+const resetSlider = () => {
+  const sliderTrack = slider.querySelector(".slider__track");
+  currentIndex = 0;
+  sliderTrack.style.transform = `translateX(0px)`;
+  clickLength = calculateClickLength();
+  updateArrowStates(currentIndex);
 };
 
-const calculateClickLength = () => {
-  const sliderRow = document.querySelector(".slider__row");
-  const sliderTrack = document.querySelector(".slider__track");
+//burger menu
+document.addEventListener("DOMContentLoaded", () => {
+  const hamburger = document.querySelector(".hamburger");
+  const navigation = document.querySelector(".header__navigation");
+  const links = document.querySelectorAll(".navigation a");
 
-  // Total width of the slider
-  const totalWidth = sliderTrack.offsetWidth;
+  // Toggle menu on hamburger click
+  hamburger.addEventListener("click", () => {
+    navigation.classList.toggle("active");
+    hamburger.classList.toggle("active");
+  });
 
-  // Visible area
-  const visibleWidth = sliderRow.offsetWidth;
+  // Close menu on link click
+  links.forEach((link) => {
+    link.addEventListener("click", () => {
+      navigation.classList.remove("active");
+      hamburger.classList.remove("active");
+    });
+  });
 
-  //Click numbers
-  const clickNumbers = updateClickNumbers();
-
-  // window.addEventListener("resize", () => {
-  //   updateItemsToScroll();
-  // });
-
-  return (totalWidth - visibleWidth) / clickNumbers;
-};
+  // Close menu on window resize
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 768) {
+      navigation.classList.remove("active");
+      hamburger.classList.remove("active");
+    }
+  });
+});

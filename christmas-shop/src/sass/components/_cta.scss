@@ -54,6 +54,16 @@
   color: $color-light;
 }
 
+.timer__number {
+  align-self: stretch;
+  text-align: center;
+}
+
+.timer__text {
+  align-self: stretch;
+  text-align: center;
+}
+
 .timer__separator {
   width: 0.1rem;
   height: 2rem;
