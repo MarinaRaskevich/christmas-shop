@@ -48,13 +48,13 @@
     height: calc(100vh - 5rem);
     background-color: $color-light;
     z-index: 1000;
-    transition: right 0.3s ease;
+    transition: right 0.5s ease;
     display: flex;
     justify-content: center;
     align-items: center;
 
     &.active {
-      right: 0; // Показываем меню
+      right: 0;
       height: 100%;
     }
   }

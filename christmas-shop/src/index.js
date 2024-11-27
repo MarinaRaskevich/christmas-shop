@@ -271,6 +271,7 @@ document.addEventListener("DOMContentLoaded", () => {
   hamburger.addEventListener("click", () => {
     navigation.classList.toggle("active");
     hamburger.classList.toggle("active");
+    document.body.classList.add("scroll-off");
   });
 
   // Close menu on link click
@@ -278,6 +279,8 @@ document.addEventListener("DOMContentLoaded", () => {
     link.addEventListener("click", () => {
       navigation.classList.remove("active");
       hamburger.classList.remove("active");
+
+      document.body.classList.remove("scroll-off");
     });
   });
 
@@ -286,6 +289,8 @@ document.addEventListener("DOMContentLoaded", () => {
     if (window.innerWidth > 768) {
       navigation.classList.remove("active");
       hamburger.classList.remove("active");
+
+      document.body.classList.remove("scroll-off");
     }
   });
 });

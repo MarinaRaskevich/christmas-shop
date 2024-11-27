@@ -218,6 +218,10 @@ html {
   scroll-behavior: smooth;
 }
 
+body.scroll-off {
+  overflow: hidden;
+}
+
 .page {
   font-size: 1.6rem;
   font-style: normal;
@@ -466,6 +470,7 @@ ul {
 }
 @media (max-width: 768px) {
   .hamburger {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -476,18 +481,32 @@ ul {
     height: 4rem;
   }
 }
+.hamburger.active .hamburger__line_top {
+  transform: translate(-50%, -50%) rotate(45deg);
+  top: 50%;
+  left: 50%;
+}
+.hamburger.active .hamburger__line_bottom {
+  transform: translate(-50%, -50%) rotate(-45deg);
+  top: 50%;
+  left: 50%;
+}
 
 .hamburger__line {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
   width: 2rem;
   background-color: #181c29;
   height: 0.1rem;
-  transition: transform 0.3s ease, opacity 0.3s ease;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  transform-origin: center;
 }
-.hamburger__line:nth-child(1) {
-  transform-origin: top left;
+.hamburger__line_top {
+  top: 1.6rem;
 }
-.hamburger__line:nth-child(3) {
-  transform-origin: bottom left;
+.hamburger__line_bottom {
+  top: calc(100% - 1.6rem);
 }
 
 .gift {
@@ -652,10 +671,6 @@ ul {
   gap: 0.8rem;
 }
 
-body.modal-open {
-  overflow: hidden;
-}
-
 .overlay {
   padding: 0 0.8rem;
   position: fixed;
@@ -755,7 +770,7 @@ body.modal-open {
     height: calc(100vh - 5rem);
     background-color: #ffffff;
     z-index: 1000;
-    transition: right 0.3s ease;
+    transition: right 0.5s ease;
     display: flex;
     justify-content: center;
     align-items: center;

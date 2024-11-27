@@ -5,6 +5,7 @@
   @extend %cursor-pointer;
   @extend %transition;
   @include media-tablet-burger {
+    position: relative;
     @include flex(
       $direction: column,
       $justify: center,
@@ -14,18 +15,35 @@
     width: 4rem;
     height: 4rem;
   }
+  &.active {
+    .hamburger__line_top {
+      transform: translate(-50%, -50%) rotate(45deg);
+      top: 50%;
+      left: 50%;
+    }
+    .hamburger__line_bottom {
+      transform: translate(-50%, -50%) rotate(-45deg);
+      top: 50%;
+      left: 50%;
+    }
+  }
 }
 
 .hamburger__line {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
   width: 2rem;
   background-color: $color-dark;
   height: 0.1rem;
-  transition: transform 0.3s ease, opacity 0.3s ease;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  transform-origin: center;
 
-  &:nth-child(1) {
-    transform-origin: top left;
+  &_top {
+    top: 1.6rem;
   }
-  &:nth-child(3) {
-    transform-origin: bottom left;
+
+  &_bottom {
+    top: calc(100% - 1.6rem);
   }
 }
