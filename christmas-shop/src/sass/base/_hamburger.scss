@@ -4,7 +4,7 @@
   display: none;
   @extend %cursor-pointer;
   @extend %transition;
-  @include media-tablet {
+  @include media-tablet-burger {
     @include flex(
       $direction: column,
       $justify: center,

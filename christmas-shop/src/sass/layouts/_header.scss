@@ -11,7 +11,7 @@
 }
 
 .header__logo-line {
-  @include media-tablet {
+  @include media-tablet-burger {
     position: relative;
     z-index: 1001;
     width: 100%;

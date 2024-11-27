@@ -3,7 +3,7 @@
 .navigation {
   @include flex($align: center, $gap: 0.8rem);
   padding-left: 0;
-  @include media-tablet {
+  @include media-tablet-burger {
     flex-direction: column;
     gap: 1.5rem;
   }
@@ -40,7 +40,7 @@
   @include flex($justify: flex-end, $align: center);
   flex: 1 0 0;
   align-self: stretch;
-  @include media-tablet {
+  @include media-tablet-burger {
     position: fixed;
     top: 0;
     right: -100%;
