@@ -1,9 +1,5 @@
 @use "../abstracts" as *;
 
-body.modal-open {
-  overflow: hidden;
-}
-
 .overlay {
   padding: 0 0.8rem;
   position: fixed;

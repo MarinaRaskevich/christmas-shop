@@ -6,6 +6,10 @@ html {
   scroll-behavior: smooth;
 }
 
+body.scroll-off {
+  overflow: hidden;
+}
+
 .page {
   @extend %font-primary;
   @include font(

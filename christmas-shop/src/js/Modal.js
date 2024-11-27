@@ -75,7 +75,7 @@ export class Modal {
 
   openModal() {
     document.body.append(this.overlay);
-    document.body.classList.add("modal-open");
+    document.body.classList.add("scroll-off");
   }
 
   closeModal(e) {
@@ -84,7 +84,7 @@ export class Modal {
       element.classList.contains("overlay") ||
       element.closest(".modal__close-icon")
     ) {
-      document.body.classList.remove("modal-open");
+      document.body.classList.remove("scroll-off");
       document.querySelector(".overlay").remove();
     }
   }
