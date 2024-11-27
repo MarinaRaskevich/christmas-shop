@@ -33,10 +33,9 @@
   color: $color-dark;
   padding: 2rem;
   flex: 1 0 0;
-  &:hover {
-    color: $color-primary;
-    @include media-tablet {
-      color: $color-dark;
+  @media (hover: hover) {
+    &:hover {
+      color: $color-primary;
     }
   }
 }
@@ -63,11 +62,9 @@
   color: inherit;
   @extend %transition;
   @extend %cursor-pointer;
-  &:hover {
-    color: $color-primary;
-    @include media-tablet {
-      cursor: default;
-      color: inherit;
+  @media (hover: hover) {
+    &:hover {
+      color: $color-primary;
     }
   }
 }
@@ -85,38 +82,22 @@
   padding: 0.8rem;
   width: 4rem;
   height: 4rem;
-  &:hover {
-    .ico_telegram {
-      background-image: url("../img/icons/telegram-hover.svg");
-    }
-
-    .ico_facebook {
-      background-image: url("../img/icons/facebook-hover.svg");
-    }
-
-    .ico_instagram {
-      background-image: url("../img/icons/instagram-hover.svg");
-    }
-
-    .ico_x {
-      background-image: url("../img/icons/x-hover.svg");
-    }
-    @include media-tablet {
-      cursor: default;
+  @media (hover: hover) {
+    &:hover {
       .ico_telegram {
-        background-image: url("../img/icons/telegram.svg");
+        background-image: url("../img/icons/telegram-hover.svg");
       }
 
       .ico_facebook {
-        background-image: url("../img/icons/facebook.svg");
+        background-image: url("../img/icons/facebook-hover.svg");
       }
 
       .ico_instagram {
-        background-image: url("../img/icons/instagram.svg");
+        background-image: url("../img/icons/instagram-hover.svg");
       }
 
       .ico_x {
-        background-image: url("../img/icons/x.svg");
+        background-image: url("../img/icons/x-hover.svg");
       }
     }
   }

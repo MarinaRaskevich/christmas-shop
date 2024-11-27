@@ -9,13 +9,10 @@
   &_colored {
     background: $color-dark;
     color: $color-light;
-    &:hover {
-      background: $color-light;
-      color: $color-dark;
-      @include media-tablet {
-        background: $color-dark;
-        color: $color-light;
-        cursor: default;
+    @media (hover: hover) {
+      &:hover {
+        background: $color-light;
+        color: $color-dark;
       }
     }
   }
@@ -31,25 +28,15 @@
   border: 1px solid $color-light;
   width: 5.6rem;
   height: 5.6rem;
-  &:hover {
-    .ico_arrow-right {
-      background-image: url("../img/icons/arrow-right-hover.svg");
-    }
-    .ico_arrow-left {
-      background-image: url("../img/icons/arrow-left-hover.svg");
-    }
-    background: $color-light;
-
-    @include media-tablet {
-      .ico_arrow-left {
-        background-image: url("../img/icons/arrow-left.svg");
-      }
-
+  @media (hover: hover) {
+    &:hover {
       .ico_arrow-right {
-        background-image: url("../img/icons/arrow-right.svg");
+        background-image: url("../img/icons/arrow-right-hover.svg");
       }
-      background-color: transparent;
-      cursor: default;
+      .ico_arrow-left {
+        background-image: url("../img/icons/arrow-left-hover.svg");
+      }
+      background: $color-light;
     }
   }
   &_inactive {

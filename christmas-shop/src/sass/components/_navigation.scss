@@ -19,11 +19,13 @@
   a {
     color: $color-dark;
   }
-  &:hover {
-    a {
-      color: $color-primary;
+  @media (hover: hover) {
+    &:hover {
+      a {
+        color: $color-primary;
+      }
+      background-color: $color-item-hovered;
     }
-    background-color: $color-item-hovered;
   }
   &_active {
     pointer-events: none;

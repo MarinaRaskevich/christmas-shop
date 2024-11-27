@@ -8,14 +8,10 @@
   height: 34.2rem;
   border-radius: 2rem;
   background: $color-content-background;
-  &:hover {
-    .gift__name {
-      color: $color-primary;
-    }
-    @include media-tablet {
-      .gift__name {
-        color: $color-dark;
-        cursor: default;
+  @media (hover: hover) {
+    &:hover {
+      .best-gift__name {
+        color: $color-primary;
       }
     }
   }

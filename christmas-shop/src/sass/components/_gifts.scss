@@ -33,11 +33,9 @@
   padding: 1.2rem 2rem;
   border-radius: 1.2rem;
   color: $color-light;
-  &:hover:not(&_selected) {
-    background: $color-tab-hoovered;
-    @include media-tablet {
-      background: transparent;
-      cursor: default;
+  @media (hover: hover) {
+    &:hover {
+      background: $color-tab-hoovered;
     }
   }
   &_selected {
