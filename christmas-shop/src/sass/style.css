@@ -767,7 +767,7 @@ ul {
     top: 0;
     right: -100%;
     width: 100%;
-    height: calc(100vh - 5rem);
+    height: 100vh;
     background-color: #ffffff;
     z-index: 1000;
     transition: right 0.5s ease;
