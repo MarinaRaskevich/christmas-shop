@@ -57,10 +57,12 @@ module.exports = (env, options) => {
       new HtmlWebpackPlugin({
         template: "index.html",
         filename: "index.html",
+        favicon: "src/img/logo.svg",
       }),
       new HtmlWebpackPlugin({
         template: "gifts.html",
         filename: "gifts.html",
+        favicon: "src/img/logo.svg",
       }),
       new MiniCssExtractPlugin({
         filename: "style.css",
