@@ -6,6 +6,7 @@ const bodyId = document.body.id;
 
 window.onload = function () {
   renderGiftsToDom();
+  handleBurgerMenu();
 
   if (bodyId === "gifts") {
     // Tabs
@@ -17,7 +18,6 @@ window.onload = function () {
   }
 
   if (bodyId === "home") {
-    // updateTimer();
     initializeSlider();
     setInterval(updateTimer, 1000);
     window.addEventListener("resize", () => {
@@ -201,7 +201,7 @@ const calculateClickLength = () => {
 };
 
 let currentIndex = 0;
-let clickLength = calculateClickLength();
+let clickLength = 0;
 
 const initializeSlider = () => {
   const sliderTrack = slider.querySelector(".slider__track");
@@ -209,6 +209,7 @@ const initializeSlider = () => {
   const rightArrow = slider.querySelector(".slider-arrow__right");
 
   updateArrowStates(currentIndex);
+  clickLength = calculateClickLength();
 
   leftArrow.addEventListener("click", () => {
     if (!leftArrow.classList.contains("slider-arrow_inactive")) {
@@ -262,29 +263,25 @@ const resetSlider = () => {
 };
 
 //burger menu
-document.addEventListener("DOMContentLoaded", () => {
+const handleBurgerMenu = () => {
   const hamburger = document.querySelector(".hamburger");
   const navigation = document.querySelector(".header__navigation");
-  const links = document.querySelectorAll(".navigation a");
+  const links = document.querySelectorAll(".navigation__link");
 
-  // Toggle menu on hamburger click
   hamburger.addEventListener("click", () => {
     navigation.classList.toggle("active");
     hamburger.classList.toggle("active");
     document.body.classList.add("scroll-off");
   });
 
-  // Close menu on link click
   links.forEach((link) => {
     link.addEventListener("click", () => {
       navigation.classList.remove("active");
       hamburger.classList.remove("active");
-
       document.body.classList.remove("scroll-off");
     });
   });
 
-  // Close menu on window resize
   window.addEventListener("resize", () => {
     if (window.innerWidth > 768) {
       navigation.classList.remove("active");
@@ -293,4 +290,4 @@ document.addEventListener("DOMContentLoaded", () => {
       document.body.classList.remove("scroll-off");
     }
   });
-});
+};
