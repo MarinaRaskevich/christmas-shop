@@ -1,6 +1,6 @@
-import giftForWork from "../img/gifts/gift-for-work.png";
-import giftForHealth from "../img/gifts/gift-for-health.png";
-import giftForHarmony from "../img/gifts/gift-for-harmony.png";
+import giftForWork from "../../img/gifts/gift-for-work.png";
+import giftForHealth from "../../img/gifts/gift-for-health.png";
+import giftForHarmony from "../../img/gifts/gift-for-harmony.png";
 
 const images = {
   work: giftForWork,
