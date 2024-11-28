@@ -3,7 +3,7 @@ export const handleScrollBackToTop = () => {
 
   const toggleBackToTopVisibility = () => {
     if (window.innerWidth <= 768) {
-      if (window.scrollY <= 100) {
+      if (window.scrollY <= 300) {
         backToTopButton.classList.add("back-to-top_hidden");
       }
     } else {
@@ -16,7 +16,7 @@ export const handleScrollBackToTop = () => {
   window.addEventListener("resize", toggleBackToTopVisibility);
 
   window.addEventListener("scroll", () => {
-    if (window.scrollY > 100 && window.innerWidth <= 768) {
+    if (window.scrollY > 300 && window.innerWidth <= 768) {
       backToTopButton.classList.remove("back-to-top_hidden");
     } else {
       backToTopButton.classList.add("back-to-top_hidden");
