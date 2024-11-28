@@ -3,7 +3,7 @@
 .hamburger {
   display: none;
   @extend %transition;
-  @include media-tablet {
+  @include media-tablet-burger {
     @include flex(
       $direction: column,
       $justify: center,
