@@ -9,6 +9,12 @@ const images = {
   health: giftForHealth,
 };
 
+const categoryTags = {
+  "For Work": "work",
+  "For Health": "health",
+  "For Harmony": "harmony",
+};
+
 export class GiftModal extends Modal {
   constructor(classes, { name, description, category, superpowers }) {
     super(classes);
@@ -20,20 +26,7 @@ export class GiftModal extends Modal {
 
   generateContent() {
     let giftModalContent = "";
-    let categoryTag;
-    switch (this.category) {
-      case "For Work":
-        categoryTag = "work";
-        break;
-
-      case "For Health":
-        categoryTag = "health";
-        break;
-
-      case "For Harmony":
-        categoryTag = "harmony";
-        break;
-    }
+    const categoryTag = categoryTags[this.category];
 
     giftModalContent += `<div class="gift-modal__image"><img src="${images[categoryTag]}" alt="gift for ${categoryTag}"></div>`;
 
@@ -50,37 +43,36 @@ export class GiftModal extends Modal {
       this.description &&
         (giftModalContent += `<p class="gift__description">${this.description}</p>`);
 
-      giftModalContent += `</div>`;
-      giftModalContent += `<div class="gift-modal__superpowers"><h4>Adds superpowers to:</h4>`;
+      giftModalContent += `</div> <div class="gift-modal__superpowers"><h4>Adds superpowers to:</h4>`;
 
       if (this.superpowers) {
         giftModalContent += `<div class="superpowers-container">`;
 
         for (const key in this.superpowers) {
           if (this.superpowers.hasOwnProperty(key)) {
-            giftModalContent += `<div class="superpower">`;
-            giftModalContent += `<p class="superpower__name">${this.capitalizeFirstLetter(
-              key
-            )}</p>`;
-            giftModalContent += `<p class="superpower__points">${this.superpowers[key]}</p>`;
-            giftModalContent += `<div class="superpower__showflakes">`;
             const points = parseInt(this.superpowers[key], 10);
-            for (let index = 0; index < 500; index += 100) {
-              if (points - index > 0) {
-                giftModalContent += `<span class="ico-modal ico_snowflake"></span>`;
-              } else {
-                giftModalContent += `<span class="ico-modal ico_snowflake-transparent"></span>`;
-              }
-            }
-            giftModalContent += `</div>`;
-            giftModalContent += `</div>`;
+
+            giftModalContent += `<div class="superpower">
+                            <p class="superpower__name">${this.capitalizeFirstLetter(
+                              key
+                            )}</p>
+                            <p class="superpower__points">${points}</p>
+                            <div class="superpower__showflakes">
+                                ${"<span class='ico-modal ico_snowflake'></span>".repeat(
+                                  points / 100
+                                )}
+                                ${"<span class='ico-modal ico_snowflake-transparent'></span>".repeat(
+                                  5 - points / 100
+                                )}
+                            </div>
+                        </div>`;
           }
         }
 
         giftModalContent += `</div>`;
       }
-      giftModalContent += `</div>`;
-      giftModalContent += `</div>`;
+      giftModalContent += `</div>
+      </div>`;
     }
 
     return giftModalContent;
