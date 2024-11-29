@@ -80,7 +80,6 @@ export class Modal {
 
   closeModal(e) {
     let element = e.target;
-    console.log(element);
     if (
       element.classList.contains("overlay") ||
       element.closest(".modal__close-icon")
