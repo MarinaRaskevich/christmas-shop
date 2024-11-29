@@ -5,6 +5,8 @@ export const handleScrollBackToTop = () => {
     if (window.innerWidth <= 768) {
       if (window.scrollY <= 300) {
         backToTopButton.classList.add("back-to-top_hidden");
+      } else {
+        backToTopButton.classList.remove("back-to-top_hidden");
       }
     } else {
       backToTopButton.classList.add("back-to-top_hidden");
