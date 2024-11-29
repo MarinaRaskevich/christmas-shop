@@ -9,7 +9,7 @@ module.exports = (env, options) => {
 
   const config = {
     mode: isProduction ? "production" : "development",
-    devtool: isProduction ? "none" : "source-map",
+    devtool: "source-map",
     watch: isProduction ? false : true,
     entry: ["./src/index.js", "./src/sass/style.scss"],
     output: {
