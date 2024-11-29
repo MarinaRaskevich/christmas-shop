@@ -5,7 +5,7 @@ export const updateTimer = () => {
 
 const calculateTimeLeft = () => {
   const nowTs = new Date();
-  let christmasTs = new Date(Date.UTC(nowTs.getUTCFullYear(), 11, 31, 0, 0, 0));
+  let christmasTs = new Date(Date.UTC(nowTs.getUTCFullYear(), 0, 1, 0, 0, 0));
 
   if (nowTs > christmasTs) {
     christmasTs.setUTCFullYear(christmasTs.getUTCFullYear() + 1);
