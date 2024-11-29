@@ -30,6 +30,7 @@
   @include flex($align: center, $justify: center);
   @extend %transition;
   @extend %cursor-pointer;
+  text-align: center;
   padding: 1.2rem 2rem;
   border-radius: 1.2rem;
   color: $color-light;

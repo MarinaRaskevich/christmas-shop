@@ -386,6 +386,7 @@ ul {
   flex-wrap: nowrap;
   width: 5.6rem;
   height: 5.6rem;
+  margin-right: 0.8rem;
   border-radius: 10rem;
   border: 1px solid #ff4646;
   background: #ffffff;
@@ -671,6 +672,25 @@ ul {
   gap: 0.8rem;
 }
 
+.gift-placeholder {
+  background: linear-gradient(90deg, #f3f3f3 25%, #ececec 50%, #f3f3f3 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  width: 31rem;
+  height: 34.2rem;
+  border-radius: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
 .overlay {
   padding: 0 0.8rem;
   position: fixed;
@@ -1192,6 +1212,7 @@ a {
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
+  text-align: center;
   padding: 1.2rem 2rem;
   border-radius: 1.2rem;
   color: #ffffff;
