@@ -10,7 +10,7 @@
 
 .slider__wrapper {
   @include flex($direction: column, $justify: center, $gap: 2rem);
-  max-width: 127.6rem;
+  width: 100%;
 }
 
 .slider__content {
@@ -18,21 +18,33 @@
   max-width: 42.6rem;
   align-self: center;
   color: $color-light;
+  margin: 0 8.2rem;
+  @include media-tablet {
+    margin: 0 0.8rem;
+  }
 }
 
 .slider__row {
   @include flex($direction: column, $justify: center, $align: flex-start);
   align-self: stretch;
-  margin-right: calc(-8.2rem);
-  overflow: hidden;
+  margin-left: 8.2rem;
   @include media-tablet {
-    margin-right: calc(-0.8rem);
+    margin-left: 0.8rem;
   }
+  //margin-right: calc(-8.2rem);
+  overflow: hidden;
+  // @include media-tablet {
+  //   margin-right: calc(-0.8rem);
+  // }
 }
 
 .slider__track {
   @extend %transition;
   @include flex($align: center, $gap: 2.12rem);
+  padding-right: 8.2rem;
+  @include media-tablet {
+    padding-right: 0.8rem;
+  }
 }
 
 .slider__item {
@@ -74,4 +86,8 @@
   @include flex($justify: flex-end, $align: center, $gap: 2rem);
   gap: 2rem;
   align-self: end;
+  margin: 0 8.2rem;
+  @include media-tablet {
+    margin: 0 0.8rem;
+  }
 }
